@@ -1,18 +1,24 @@
 import React from "react";
 import "../static/Navbar.css";
+import googleplaypng from "../static/images/google-play-badge.png";
+import appstorepng from "../static/images/app-store-png-logo-33116.png";
+import zaajiralogo from "../static/images/logo.PNG";
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>hello</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, error,
-        voluptatum consequatur qui itaque iste magnam modi ab unde earum
-        necessitatibus, adipisci omnis quibusdam odit aut molestiae? Officiis
-        nesciunt vel eius numquam sed, consequuntur quasi itaque hic natus,
-        cupiditate a temporibus? Voluptatem voluptas enim eos quo cum tempore
-        itaque quia?
-      </p>
+    <div className="navbar">
+      <div className="Zaajiralogo">
+        <img src={zaajiralogo} alt="" />
+      </div>
+      <div className="Employers">
+        <p>EMPLOYERS</p>
+      </div>
+      <div className="png png1">
+        <img src={googleplaypng} alt="" />
+      </div>
+      <div className="png png2">
+        <img src={appstorepng} alt="" />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,30 @@
 h1 {
   font-family: "Poppins", sans-serif;
 }
+.navbar {
+  display: flex;
+  background-color: #6144e4;
+  color: white;
+  /* justify-content: space-between; */
+  height: 17vh;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.Zaajiralogo {
+  width: 57vw;
+  margin-left: 20px;
+}
+.Employers {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.png img {
+  width: 170px;
+}
+.png1 img {
+  margin-left: 47%;
+}
+.png2 img {
+  margin-left: 33%;
+  width: 232px;
+}
