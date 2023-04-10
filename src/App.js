@@ -1,12 +1,15 @@
+import { Navbar } from "react-bootstrap";
 import "./App.css";
+import NavBar from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 import Body from "./components/Main/Body";
 
 function App() {
   return (
     <>
-           <Body />
-      <Footer title="Zaajira"/>
+      <NavBar />
+      <Body />
+      <Footer title="Zaajira" />
     </>
   );
 }
