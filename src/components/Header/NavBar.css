@@ -1,0 +1,22 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: #6146e3 !important;
+}
+.navleft {
+  flex-basis: 55vw;
+}
+.navcenter {
+  align-items: center;
+}
+.employes {
+  color: white !important;
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
+  padding-right: 11% !important;
+}
+
+.png img {
+  width: 180px;
+  padding: 8%;
+}
