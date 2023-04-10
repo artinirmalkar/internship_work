@@ -1,10 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-    <Footer title="Zaajira"/>
+      <Navbar /><Footer title="Zaajira"/>
     </>
   );
 }
