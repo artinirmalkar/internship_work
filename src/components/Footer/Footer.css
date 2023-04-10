@@ -41,11 +41,39 @@ icon ul li {
   color: rgb(98, 68, 229);
   background-color: white;
 }
-
+.topFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
 .topFooter h3{
   margin-left: 20px;
   font-size: 40px;
   padding: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+}
+
+.topFooter img{
+ width: 50%;
+ height:10%;
+
+}
+
+.bannerfooter{
+  height: 20px;
+  background-color: yellow;
+  display: none;
+}
+@media screen and (width<=770px) {
+  .topFooter{
+    display: none;
+  }
+  .bannerfooter{
+    display: block;
+  }
+
 }
