@@ -5,7 +5,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Navbar /><Footer title="Zaajira"/>
+      <Navbar />
+      <Footer title="Zaajira"/>
     </>
   );
 }
