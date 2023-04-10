@@ -1,0 +1,43 @@
+.footer {
+  background-color: rgb(98, 68, 229);
+  display: flex;
+  justify-content: space-around;
+  /* height: 30vh; */
+  padding: 3rem;
+  margin: 0% 10%;
+  text-align: left;
+}
+
+.textalign ul li {
+  list-style: none;
+  padding: 5px 0px;
+}
+.textalign ul li a {
+  text-decoration: none;
+  color: white;
+}
+.first {
+  text-align: left;
+}
+.first p {
+  color: white;
+}
+.forth h3 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.icon {
+  display: flex;
+}
+icon ul li {
+  margin: 5px;
+}
+.icon a {
+  margin: 0px 5px;
+}
+.fa-brands {
+  padding: 5px 8px;
+  border-radius: 80%;
+  color: rgb(98, 68, 229);
+  background-color: white;
+}

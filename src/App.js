@@ -1,14 +1,12 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Body from "./components/Body";
+import Footer from "./components/Footer/Footer";
+import Body from "./components/Main/Body";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Body />
-      <Footer title="Zaajira" />
+           <Body />
+      <Footer title="Zaajira"/>
     </>
   );
 }
