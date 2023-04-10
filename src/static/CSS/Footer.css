@@ -1,5 +1,39 @@
-.footer {
+.bgfooter {
   color: white;
   background-color: rgb(98, 68, 229);
   height: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+.left{
+  margin-top: 50px;
+  margin: 20px;
+}
+.right{
+  display: flex;
+  padding: 20px;
+  /* margin: 20px; */
+}
+.textalign{
+  padding: 10px;
+  margin: 0px 20px;
+}
+.textalign ul li {
+  list-style: none;
+  padding: 8px;
+}
+.textalign ul li a{
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.third h3{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 85px;
+}
+.third ul li{
+margin-left: 40px;
+display: inline-flex;
 }
