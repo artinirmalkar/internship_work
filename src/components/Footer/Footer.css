@@ -41,3 +41,11 @@ icon ul li {
   color: rgb(98, 68, 229);
   background-color: white;
 }
+
+.topFooter h3{
+  margin-left: 20px;
+  font-size: 40px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
