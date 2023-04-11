@@ -1,0 +1,18 @@
+/* .cards-wrapper {
+    display: flex;
+    justify-content: center;
+  } */
+  /* .card img {
+    max-width: 100%;
+    max-height: 100%;
+  } */
+
+  .FullCarousel{
+   display: inline-flex !important;
+   justify-content: space-between !important;
+   height: 100vh !important;
+
+  }
+  /* .leftcontent{
+    width: 20vw;
+  } */
