@@ -1,7 +1,8 @@
 .navbar {
-  position: fixed;
+  position: sticky !important;
   top: 0;
   background-color: #6146e3 !important;
+  border-bottom: 0.5px solid white;
 }
 .navleft {
   flex-basis: 55vw;
