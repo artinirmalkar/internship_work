@@ -13,7 +13,6 @@ function App() {
       <NavBar />
       <Banner />
       <Features />
-
       <Counter />
       <TopFooter />
       <Footer title="Zaajira" />
