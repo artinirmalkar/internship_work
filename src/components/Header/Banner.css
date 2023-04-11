@@ -70,7 +70,7 @@
 }
 /* ----------------------Media ------------------------ */
 
-@media screen and (width<=500px) {
+@media screen and (width<=990px) {
   .banner {
     flex-direction: column;
     height: auto;
