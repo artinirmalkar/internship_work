@@ -1,0 +1,30 @@
+.counter{
+   background-color: rgb(98, 68, 229); 
+   width: 100vw;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 40vh;
+   flex-wrap: wrap;
+}
+.counterItem{
+color: white;
+text-align: center;
+font-size: 20px;
+}
+@media screen and (width<=1000px) {
+    .counter{
+        display: flex;
+        justify-content: space-around;
+     flex-wrap: wrap;
+     flex-direction: column;
+    }
+     
+  }
+
+@media screen and (width<=700px) {
+    .counter{
+      display: none;
+    }
+     
+  }
