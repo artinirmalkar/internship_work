@@ -2,12 +2,14 @@
   background-color: rgb(98, 68, 229);
   display: flex;
   justify-content: space-around;
-  /* height: 30vh; */
-  padding: 3rem;
-  margin: 0% 10%;
+  padding: 2rem;
   text-align: left;
 }
-
+.mright{
+  /* margin-right:none !important;
+  margin-left:none !important; */
+  margin-right: calc(0 * var(--bs-gutter-x)) !important;
+}
 .textalign ul li {
   list-style: none;
   padding: 5px 0px;
@@ -64,16 +66,28 @@ icon ul li {
 }
 
 .bannerfooter{
-  height: 20px;
-  background-color: yellow;
+  height: 20%;
+  background-color: rgb(97, 70, 227);
   display: none;
+  justify-content: space-around;
+  gap: 10%;
+}
+.bannerfooter p{
+  color: white;
+  font-size: 20px;
+  display: inline-flex;
+  }
+.bannerfooter img{
+  width: 10rem;
+  
 }
 @media screen and (width<=770px) {
   .topFooter{
     display: none;
   }
   .bannerfooter{
-    display: block;
+    display: flex;
+    padding: 10px;
   }
 
 }

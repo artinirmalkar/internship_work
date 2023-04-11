@@ -4,7 +4,7 @@ import  image from  '../../static/images/logo.PNG'
 import "bootstrap/dist/css/bootstrap.min.css";
 function Footer() {
     return (
-        <div className="footer row">
+        <div className="footer row mright">
             <div className="first textalign col-md-6">
                 <img src={image} alt="logo" />
                 <p>An integrated AI talent acquisition platform, helping screen <br />
