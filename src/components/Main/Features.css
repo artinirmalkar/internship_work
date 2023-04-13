@@ -3,7 +3,7 @@
   gap: 10%;
   height: 67vh;
   align-items: center;
-  gap: 56px;
+  gap: 20px;
 }
 .feature-left {
   padding-left: 3%;
@@ -23,16 +23,17 @@
   padding: 2.4%;
   padding-block: 4%;
   background-color: #f4f2ff;
-  height: 30vh;
+  height: 40vh;
   justify-content: space-around;
-  width: 60%;
+  width: 65%;
 }
 
 .feature-content {
   text-align: left;
 
   /* height: 20vh; */
-  width: 30%;
+  flex-basis: 40vw;
+  padding-inline: 1vw;
 }
 .feature-content1,
 .feature-content2 {

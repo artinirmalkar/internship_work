@@ -17,11 +17,11 @@ const Features = () => {
         </div>
         <div className="feature-content feature-content2">
           <i class="fa-regular fa-circle-check"></i>
-          <p>Connect with top employers in minutes</p>
+          <p>Increase your chances with custom cards</p>
         </div>
         <div className="feature-content">
           <i class="fa-regular fa-circle-check"></i>
-          <p>Connect with top employers in minutes</p>
+          <p>Browse specific jobs with detailed requirements</p>
         </div>
       </div>
     </div>
