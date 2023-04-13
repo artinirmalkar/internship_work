@@ -1,15 +1,57 @@
-import React from 'react'
-import CardCarousel from './CardCarousel'
-
-const Card = () => {
+import React from "react";
+// import Profile from "./Profile";
+const Card = (props) => {
+ 
   return (
-    <div className='card' style={{display:"inline-flex", width:"20vw", margin:"30px"}}>
-      <CardCarousel/>
-      <div className="content" style={{ width:"17rem", padding:"0px 15px", textAlign:"justify", display:"inline-block"}}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nobis eaque cum praesentium itaque aliquid fugiat, sapiente quasi rerum laudantium deleniti culpa. Fuga quidem labore perferendis natus quas in distinctio excepturi fugit, nobis alias obcaecati unde nulla ut blanditiis dolor aspernatur error incidunt vitae ab officiis? Dicta totam sint maxime.
+   <>
+   <div className="card" style={{ borderRadius:"15px",margin:" 0.5rem", height:"50vh", position:"relative",zIndex:"1", boxShadow:"1px 1px 10px black"}}>
+     <div
+      className="Topcard"
+      style={{
+        display: "flex",
+        // paddingRight: "15px",
+        backgroundColor: "rgb(98, 68, 229)",
+        width: "17rem",
+        height: "5rem",
+        borderRadius: "10px",
+        textAlign:"left",
+        // justifyContent: "space-around",
+        alignItems: "center"
+      }}
+    >
+      <div className="profile" style={{flexBasis:"60px", paddingLeft:"8px"}}>
+      <div>
+        <i style={{backgroundColor:"rgb(52, 58, 64)", color:"rgb(255, 255, 255)", borderRadius:"30px", padding:"10px 13px",  fontSize: "21px"}} class="fa-solid fa-user"></i>
+    </div>
+      </div>
+      <div className="content" >
+        <div style={{ color: "White", fontSize: "25px" }}>
+          {props.name}
+        </div>
+        <div style={{ color: "White", fontSize: "15px", lineHeight: "1rem" }}>
+          {props.position}
+        </div>
       </div>
     </div>
-  )
+    <div
+      className="content"
+      style={{
+      
+        width: "17rem",
+        padding: "30px 20px",
+
+        textAlign: "left",
+
+        display: "inline-block",
+        fontSize:"1.2rem",
+      }}
+    >
+      {props.desc}
+    </div>
+    </div>
+   </>
+ 
+  );
 }
 
 export default Card;

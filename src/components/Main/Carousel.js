@@ -28,9 +28,9 @@ const Carousel = () => {
   <div class="carousel-inner">
     <div class="carousel-item active">
     <div class="cards-wrapper">
-    <Card/>
-    <Card/>
-   <Card/>
+    <Card name="Arti" />
+    <Card name="Himanshu"/>
+    <Card name="Pankaj"/>
 </div></div>
     <div class="carousel-item">
     <div class="cards-wrapper">
