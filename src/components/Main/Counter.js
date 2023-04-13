@@ -1,22 +1,24 @@
-import React from 'react'
-import '../Main/Counter.css'
-const Counter = () => {
+import React, { useState } from "react";
+import "../Main/Counter.css";
+// const [Counter,setCounter]=useState({});
+
+const Counter = props => {
   return (
-    <div className='counter'>
+    <div className="counter">
       <div className="counterItem">
-        <h3>50K+</h3>
+        <h3 id="counter">5K+</h3>
         <p>Candidates</p>
       </div>
       <div className="counterItem">
-      <h3>2K+</h3>
+        <h3>2K+</h3>
         <p>Jobs</p>
       </div>
       <div className="counterItem">
-      <h3>1K+</h3>
+        <h3>1K+</h3>
         <p>Employers</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

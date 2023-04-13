@@ -5,6 +5,7 @@
    align-items: center;
    height: 40vh;
    flex-wrap: wrap;
+   margin-bottom: 5%;
 }
 .counterItem{
 color: white;

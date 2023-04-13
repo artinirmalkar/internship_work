@@ -3,7 +3,7 @@ import React from "react";
 const TopFooter = () => {
   return (
     <>
-      <div className="topFooter">
+      <div className="topFooter" style={{padding:"30px 0px"}}>
         <h3>
           {" "}
           Trusted by leading <br />
