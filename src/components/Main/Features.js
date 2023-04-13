@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Features.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Features = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="feature">
+    <div className="feature" data-aos="fade-in">
       <div className="feature-left">
         <p className="zaajira-text">Why Apply On Zaajira ?</p>
         <p className="zaajira-text-bottom">

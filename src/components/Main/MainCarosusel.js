@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // import * as ReactDOMClient from "react-dom/client";
 
@@ -6,6 +8,9 @@ import Carousel from "react-simply-carousel";
 import Card from "../../static/Single Component/Card";
 
 function MainCarousel() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [activeSlide, setActiveSlide] = useState(0);
   const names = [
     "Arti",
@@ -17,7 +22,7 @@ function MainCarousel() {
     "aman",
     "yash",
     "pankaj",
-    "himanshu"
+    "himanshu",
   ];
   const positions = [
     "Software Engineer",
@@ -29,7 +34,7 @@ function MainCarousel() {
     "Human Resources Manager",
     "Customer Service Representative",
     "Product Manager",
-    "Web Developer"
+    "Web Developer",
   ];
   const descs = [
     "Thanks to the job portal, I was able to find my dream job in just a few weeks!",
@@ -41,106 +46,113 @@ function MainCarousel() {
     "I found the job portal's salary estimator tool to be extremely helpful in negotiating my job offer.",
     "The job portal's interview preparation resources helped me feel confident and well-prepared for my job interviews.",
     "The job portal's career advice articles and forums provided me with valuable insights and tips for advancing my career.",
-    "I would highly recommend the job portal to anyone looking for a job, as it made the entire job search process much easier and more efficient."
+    "I would highly recommend the job portal to anyone looking for a job, as it made the entire job search process much easier and more efficient.",
   ];
 
   return (
-    <div style={{ marginBottom: "20px" }}>
-      <h1 style={{ textAlign: "center", paddingBottom: "2rem" }}>
-        Zaajira Success Stories
-      </h1>{" "}
-      <Carousel
-        containerProps={{
-          style: {
-            width: "100%",
-
-            justifyContent: "space-around",
-
-            userSelect: "none"
-          }
-        }}
-        preventScrollOnSwipe
-        swipeTreshold={60}
-        activeSlideIndex={activeSlide}
-        // activeSlideProps={{}}
-        onRequestChange={setActiveSlide}
-        forwardBtnProps={{
-          children: ">",
-
-          style: {
-            width: 60,
-
-            height: 60,
-
-            borderRadius: 30,
-
-            minWidth: 60,
-
-            alignSelf: "center"
-          }
-        }}
-        backwardBtnProps={{
-          children: "<",
-
-          style: {
-            width: 60,
-
-            height: 60,
-
-            borderRadius: 30,
-
-            minWidth: 60,
-
-            alignSelf: "center"
-          }
-        }}
-        dotsNav={{
-          show: true,
-
-          itemBtnProps: {
+    <div>
+      <div style={{ marginBottom: "20px" }}>
+        <h1
+          style={{ textAlign: "center", paddingBottom: "2rem" }}
+          data-aos="zoom-in"
+        >
+          Zaajira Success Stories
+        </h1>{" "}
+        <Carousel
+          containerProps={{
             style: {
-              height: 16,
+              width: "100%",
 
-              width: 16,
+              justifyContent: "space-around",
 
-              borderRadius: "50%",
+              userSelect: "none",
+            },
+          }}
+          preventScrollOnSwipe
+          swipeTreshold={60}
+          activeSlideIndex={activeSlide}
+          // activeSlideProps={{}}
+          onRequestChange={setActiveSlide}
+          forwardBtnProps={{
+            children: ">",
 
-              border: 0,
-
-              display: "none"
-            }
-          },
-
-          activeItemBtnProps: {
             style: {
-              height: 16,
+              width: 60,
 
-              width: 16,
+              height: 60,
 
-              borderRadius: "50%",
+              borderRadius: 30,
 
-              border: 0,
+              minWidth: 60,
 
-              background: "black",
+              alignSelf: "center",
+            },
+          }}
+          backwardBtnProps={{
+            children: "<",
 
-              display: "none"
-            }
-          }
-        }}
-        itemsToShow={3}
-        speed={400}
-      >
-        {Array.from({ length: 10 }).map((item, index) =>
-          <div key={index}>
-            <Card
-              name={names[index % names.length]}
-              position={positions[index % positions.length]}
-              desc={descs[index % descs.length]}
-            />
-            {/* <CardDesc desc={descs[index % descs.length]} /> */}
-          </div>
-        )}
-      </Carousel>
+            style: {
+              width: 60,
+
+              height: 60,
+
+              borderRadius: 30,
+
+              minWidth: 60,
+
+              alignSelf: "center",
+            },
+          }}
+          dotsNav={{
+            show: true,
+
+            itemBtnProps: {
+              style: {
+                height: 16,
+
+                width: 16,
+
+                borderRadius: "50%",
+
+                border: 0,
+
+                display: "none",
+              },
+            },
+
+            activeItemBtnProps: {
+              style: {
+                height: 16,
+
+                width: 16,
+
+                borderRadius: "50%",
+
+                border: 0,
+
+                background: "black",
+
+                display: "none",
+              },
+            },
+          }}
+          itemsToShow={3}
+          speed={400}
+        >
+          {Array.from({ length: 10 }).map((item, index) => (
+            <div key={index}>
+              <div data-aos="fade-in" data-aos-duration="3000">
+                <Card
+                  name={names[index % names.length]}
+                  position={positions[index % positions.length]}
+                  desc={descs[index % descs.length]}
+                />
+              </div>
+              {/* <CardDesc desc={descs[index % descs.length]} /> */}
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 }

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Banner.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="banner">
+    <div className="banner" data-aos="fade-in">
       <div className="bannerleft">
         <p>Enabling jobs for millions of talented workers</p>
       </div>
-      <div className="bannerright">
+      <div className="bannerright" data-aos="flip-right">
         <a href="#">
           <div className="Card hireacandidate ">
             <div className="cardleft ">
