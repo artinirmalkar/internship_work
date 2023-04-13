@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Main/Counter.css";
 // const [Counter,setCounter]=useState({});
 
-const Counter = props => {
+const Counter = () => {
   return (
     <div className="counter">
       <div className="counterItem">

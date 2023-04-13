@@ -1,28 +1,34 @@
 import NavBar from "./components/Header/NavBar";
-import Counter from "./components/Main/Counter";
-import Banner from "./components/Header/Banner";
-import TopFooter from "./components/Footer/TopFooter";
-import Footer from "./components/Footer/Footer";
-import Features from "./components/Main/Features";
-import Card from "./static/Single Component/Card";
-import Carousel from "./components/Main/Carousel";
-import CardCarousel from "./static/Single Component/CardCarousel";
-import MainCarousel from "./components/Main/MainCarosusel";
-
+import Employer from "./components/Employer";
+// import Counter from "./components/Main/Counter";
+// import Banner from "./components/Header/Banner";
+// import TopFooter from "./components/Footer/TopFooter";
+// import Footer from "./components/Footer/Footer";
+// import Features from "./components/Main/Features";
+// import MainCarousel from "./components/Main/MainCarosusel";
+import Landing from "./components/Landing";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Banner />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<Landing />} />
+          <Route path="/employer" element={<Employer />} />
+          {/* <Route path='/login'  element={<Login/>}/> */}
+        </Route>
+      </Routes>
+
+      {/* <NavBar /> */}
+      {/* <Banner />
       <Features />
       <Counter countIncrease="5000" />
         <MainCarousel/>
        <TopFooter />
       <Footer title="Zaajira" /> 
-      
-      
-    </>
+       */}
+    </BrowserRouter>
   );
 }
 
