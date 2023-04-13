@@ -14,7 +14,7 @@ function MainCarousel() {
   const [activeSlide, setActiveSlide] = useState(0);
   const names = [
     "Arti",
-    "ram",
+    "Himanshu",
     "leena",
     "mena",
     "hena",
@@ -22,11 +22,11 @@ function MainCarousel() {
     "aman",
     "yash",
     "pankaj",
-    "himanshu",
+    "anshu",
   ];
   const positions = [
     "Software Engineer",
-    "Marketing Manager",
+    "Front-End devloper",
     "Accountant",
     "Graphic Designer",
     "Sales Representative",

@@ -52,7 +52,7 @@ const Counter = () => {
         <div className="counterItem">
           <h3>
             {CounterOn && (
-              <CountUp start={200} end={300} duration={4} delay={0} />
+              <CountUp start={100} end={300} duration={4} delay={0} />
             )}
             +
           </h3>
@@ -61,7 +61,7 @@ const Counter = () => {
         <div className="counterItem">
           <h3>
             {CounterOn && (
-              <CountUp start={500} end={600} duration={4} delay={0} />
+              <CountUp start={400} end={600} duration={4} delay={0} />
             )}
             +
           </h3>
