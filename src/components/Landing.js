@@ -9,11 +9,14 @@ import Features from "./Main/Features";
 // import Carousel from "../components/Main/Carousel";
 // import CardCarousel from "../static/Single Component/CardCarousel";
 import MainCarousel from "./Main/MainCarosusel";
+import HireCandidate from "./Header/HireCandidate";
 
 export default function Landing() {
   return (
     <div>
-      <Banner />
+      <Banner heading="Enabling jobs for millions of talented workers">
+        <HireCandidate />
+      </Banner>
       <Features />
       <Counter countIncrease="5000" />
       <MainCarousel />
