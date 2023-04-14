@@ -1,13 +1,21 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-const Login = props => {
+const Login = (props) => {
   const onChange = () => {};
   return (
-    <div style={{ width: "30%", marginRight: "5rem", borderRadius: "10px" }}>
+    <div
+      style={{
+        width: "30%",
+        margin: "5rem",
+        borderRadius: "10px",
+        backgroundColor: "white",
+        lineHeight: "3rem",
+      }}
+    >
       <div
         style={{
           width: "30vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
         }}
       >
         <h4 style={{ textAlign: "center", padding: "35px 20px" }}>
@@ -22,9 +30,9 @@ const Login = props => {
                 width: "90%",
                 margin: "20px",
                 borderRadius: "5px",
-                padding: "10px 5PX",
+                paddingInline: "5px",
                 border: "none",
-                backgroundColor: "rgb(234, 234, 234)"
+                backgroundColor: "rgb(234, 234, 234)",
               }}
               required
             />{" "}
@@ -36,9 +44,9 @@ const Login = props => {
                 width: "90%",
                 margin: "20px",
                 borderRadius: "5px",
-                padding: "10px 5PX",
+                paddingInline: "5px",
                 border: "none",
-                backgroundColor: "rgb(234, 234, 234)"
+                backgroundColor: "rgb(234, 234, 234)",
               }}
               required
             />
@@ -62,7 +70,7 @@ const Login = props => {
                 margin: "20px",
                 color: "WHITE",
                 border: "none",
-                borderRadius: "5px"
+                borderRadius: "5px",
               }}
             >
               LOGIN
@@ -70,16 +78,17 @@ const Login = props => {
           </form>
         </div>
       </div>
-      <div className="textalign" style={{ textAlign: "center" }}>
-        <span style={{ textAlign: "center" }}>
-          {props.confirmation}
-        </span>
+      <div
+        className="textalign"
+        style={{ textAlign: "center", paddingBlock: "1rem" }}
+      >
+        <span style={{ textAlign: "center" }}>{props.confirmation}</span>
         <a
           style={{
             width: "100%",
             textDecoration: "none",
             fontWeight: "bold",
-            color: "rgb(139, 89, 229)"
+            color: "rgb(139, 89, 229)",
             // margin: "0px 10%",
           }}
           href="#"
@@ -92,7 +101,7 @@ const Login = props => {
             width: "100%",
             textDecoration: "none",
             fontWeight: "bold",
-            color: "rgb(139, 89, 229)"
+            color: "rgb(139, 89, 229)",
             // margin: "0px 10%",
           }}
           href="#"
