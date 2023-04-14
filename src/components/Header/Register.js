@@ -3,7 +3,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Login = props => {
   const onChange = () => {};
   return (
-    <div style={{ width: "30%", marginRight: "5rem", borderRadius: "10px" }}>
+    <div
+      style={{
+        width: "30%",
+        marginRight: "5rem",
+        borderRadius: "10px"
+      }}
+    >
       <div
         style={{
           width: "30vw",
@@ -16,8 +22,21 @@ const Login = props => {
         <div className="form" style={{ width: "100%" }}>
           <form action="#">
             <input
+              type="text"
+              placeholder="Company Name"
+              style={{
+                width: "90%",
+                margin: "20px",
+                borderRadius: "5px",
+                padding: "10px 5PX",
+                border: "none",
+                backgroundColor: "rgb(234, 234, 234)"
+              }}
+              required
+            />{" "}
+            <input
               type="email"
-              placeholder="Email or Phone number"
+              placeholder="Email or Phone"
               style={{
                 width: "90%",
                 margin: "20px",
@@ -33,7 +52,20 @@ const Login = props => {
               type="password"
               placeholder="Password"
               style={{
-                width: "90%",
+                width: " 90%",
+                margin: "20px",
+                borderRadius: "5px",
+                padding: "10px 5PX",
+                border: "none",
+                backgroundColor: "rgb(234, 234, 234)"
+              }}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              style={{
+                width: " 90%",
                 margin: "20px",
                 borderRadius: "5px",
                 padding: "10px 5PX",
@@ -46,8 +78,7 @@ const Login = props => {
               type="checkbox"
               name="remeber me"
               style={{ margin: "20px" }}
-            />
-            Remember Me
+            />Remember Me
             <ReCAPTCHA
               style={{ margin: "0px 10%" }}
               sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
@@ -65,14 +96,14 @@ const Login = props => {
                 borderRadius: "5px"
               }}
             >
-              LOGIN
+              REGISTER
             </button>
           </form>
         </div>
       </div>
       <div className="textalign" style={{ textAlign: "center" }}>
-        <span style={{ textAlign: "center" }}>
-          {props.confirmation}
+        <span>
+          {" "}{props.confirmation}
         </span>
         <a
           style={{
@@ -80,12 +111,9 @@ const Login = props => {
             textDecoration: "none",
             fontWeight: "bold",
             color: "rgb(139, 89, 229)"
-            // margin: "0px 10%",
           }}
           href="#"
-        >
-          Register
-        </a>
+        />
         <br />
         <a
           style={{

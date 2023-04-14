@@ -30,7 +30,7 @@ const Banner = (props) => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" />
               </p>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Banner = (props) => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" />
               </p>
             </div>
           </div>
