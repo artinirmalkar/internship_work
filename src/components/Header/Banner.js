@@ -3,14 +3,16 @@ import "./Banner.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Banner = () => {
+const Banner = props => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
     <div className="banner" data-aos="fade-in">
       <div className="bannerleft">
-        <p>Enabling jobs for millions of talented workers</p>
+        <p>
+          {props.detail}
+        </p>
       </div>
       <div className="bannerright" data-aos="flip-right">
         <a href="#">
@@ -25,7 +27,7 @@ const Banner = () => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" />
               </p>
             </div>
           </div>
@@ -42,7 +44,7 @@ const Banner = () => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right" />
               </p>
             </div>
           </div>
