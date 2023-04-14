@@ -1,23 +1,10 @@
-import React, { useEffect } from "react";
-import "./Banner.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import HireCandidate from "./HireCandidate";
+import React from "react";
+import "./HireCandidate.css";
 
-const Banner = props => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+export default function HireCandidate() {
   return (
-    <div className="banner" data-aos="fade-in">
-      <div className="bannerleft">
-        <p>
-          {props.detail}
-        </p>
-      </div>
-      <HireCandidate />
-
-      {/* <div className="bannerright" data-aos="flip-right">
+    <div>
+      <div className="bannerright" data-aos="flip-right">
         <a href="#">
           <div className="Card hireacandidate ">
             <div className="cardleft ">
@@ -30,7 +17,7 @@ const Banner = props => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right" />
+                <i class="fa-solid fa-arrow-right"></i>
               </p>
             </div>
           </div>
@@ -47,14 +34,12 @@ const Banner = props => {
             </div>
             <div className="cardright">
               <p>
-                <i class="fa-solid fa-arrow-right" />
+                <i class="fa-solid fa-arrow-right"></i>
               </p>
             </div>
           </div>
         </a>
-      </div> */}
+      </div>
     </div>
   );
-};
-
-export default Banner;
+}
