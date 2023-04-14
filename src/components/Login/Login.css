@@ -6,10 +6,10 @@
   /* line-height: 3rem; */
   /* border: 2px solid white; */
 }
-form{
-   display: flex;
-   flex-wrap: wrap;
-   gap: 6px;
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .topdetail {
   width: 30vw;
@@ -60,10 +60,10 @@ form{
 }
 
 @media screen and (width<=1000px) {
-    .mainBody {
-      width: 80vw;
-     /* margin: 5rem; */
-       border-radius: 10px;
-       background-color: white;
-    }
- }
+  .mainBody {
+    width: 80vw;
+    /* margin: 5rem; */
+    border-radius: 10px;
+    background-color: white;
+  }
+}

@@ -1,21 +1,15 @@
 import React from "react";
 import "./Login.css";
 import ReCAPTCHA from "react-google-recaptcha";
-const Login = props => {
+const Login = (props) => {
   const onChange = () => {};
   return (
     <div className="mainBody">
-      <h4>
-        {props.heading}
-      </h4>
+      <h4>{props.heading}</h4>
       <div className="topdetail">
         <div className="form">
           <form action="#">
-            <input
-              type="email"
-              placeholder="Email or Phone number"
-              required
-            />{" "}
+            <input type="email" placeholder="Email or Phone number" required />{" "}
             <br />
             <input type="password" placeholder="Password" required />
           </form>
@@ -31,14 +25,10 @@ const Login = props => {
         </div>
       </div>
       <div className="textalign">
-        <span>
-          {props.confirmation}
-        </span>
+        <span>{props.confirmation}</span>
         <a href="#">Register</a>
         <br />
-        <a href="#">
-          {props.back}
-        </a>
+        <a href="#">{props.back}</a>
       </div>
     </div>
   );

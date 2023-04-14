@@ -4,9 +4,16 @@ import Register from "./Header/Register";
 import TopFooter from "./Footer/TopFooter";
 import Footer from "./Footer/Footer";
 import Banner from "./Header/Banner";
+import NavBar from "./Header/NavBar";
+import { NavLink } from "react-router-dom";
+import Navjob from "./Header/Navjob";
 const Employer = () => {
   return (
     <>
+      <NavBar
+        myStyle={{ borderBottom: "none" }}
+        children2={<Navjob />}
+      ></NavBar>
       <Banner heading="Connect with the best candidates directly,with ease!">
         <Login
           heading="Login/Sign up With a Code"
