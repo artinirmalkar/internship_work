@@ -1,0 +1,69 @@
+.mainBody {
+  width: 30%;
+  margin: 5rem;
+  border-radius: 10px;
+  background-color: white;
+  /* line-height: 3rem; */
+  /* border: 2px solid white; */
+}
+form{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 6px;
+}
+.topdetail {
+  width: 30vw;
+  border-radius: 10px;
+}
+.btnCaptcha {
+  width: 30vw;
+}
+.mainBody h4 {
+  text-align: center;
+  padding: 35px 20px;
+}
+/* .form input {
+  width: 90%;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  background-color: rgb(234, 234, 234);
+} */
+.checkbox {
+  margin: 20px;
+}
+.loginBtn {
+  background-color: rgb(98, 68, 229);
+  /* width: 90%; */
+  padding: 15px 0;
+  margin: 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.textalign {
+  text-align: center;
+  padding-block: 1rem;
+}
+.textalign span {
+  text-align: center;
+}
+
+.textalign a {
+  width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(139, 89, 229);
+}
+
+@media screen and (width<=1000px) {
+    .mainBody {
+      width: 80vw;
+     /* margin: 5rem; */
+       border-radius: 10px;
+       background-color: white;
+    }
+ }
