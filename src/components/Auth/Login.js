@@ -2,14 +2,14 @@ import React from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-const Login = props => {
+import { Link } from "react-router-dom";
+
+const Login = (props) => {
   const onChange = () => {};
   return (
     <div className="MainBody">
       <div className="TopDetail">
-        <h4>
-          {props.heading}
-        </h4>
+        <h4>{props.heading}</h4>
         <div className="form">
           <form action="#">
             <input
@@ -43,14 +43,10 @@ const Login = props => {
         </div>
       </div>
       <div className="textalign">
-        <span>
-          {props.confirmation}
-        </span>
+        <span>{props.confirmation}</span>
         <Link to="/EmpRegister">Register</Link>
         <br />
-        <a href="#">
-          {props.back}
-        </a>
+        <a href="#">{props.back}</a>
       </div>
     </div>
   );

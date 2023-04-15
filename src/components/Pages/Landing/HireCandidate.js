@@ -1,8 +1,8 @@
 import React from "react";
 import "./HireCandidate.css";
-// import EmpLogin from "../EmpLogin/EmpLogin";
-// import QRcode from "../QR Download Section/QRcode";
 import { Link } from "react-router-dom";
+import Employer from "../Employer";
+import QRcode from "../DownloadSection/QRcode";
 
 export default function HireCandidate() {
   return (
@@ -11,7 +11,7 @@ export default function HireCandidate() {
         <a href="#">
           <div className="Card hireacandidate ">
             <div className="cardleft ">
-              <Link to="./EmpLogin">
+              <Link to="../Employer">
                 <p className="I1">Hire a Candidate</p>
               </Link>
               <a href="#">
@@ -28,7 +28,7 @@ export default function HireCandidate() {
         <a href="#" className="job">
           <div className="Card findajob">
             <div className="cardleft ">
-              <Link to="./QRcode">
+              <Link to="../QRcode">
                 <p className="I1">Find a Job</p>
               </Link>
               <a href="#">
