@@ -10,6 +10,8 @@
 }
 .navcenter {
   align-items: center;
+  display: flex;
+  justify-content: end;
 }
 .employes {
   color: white !important;
@@ -21,4 +23,8 @@
 .png img {
   width: 180px;
   padding: 8%;
+}
+
+.border-none {
+  border: none;
 }

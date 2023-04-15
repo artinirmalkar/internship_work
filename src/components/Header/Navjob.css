@@ -1,0 +1,15 @@
+.head {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  margin-left: 230px;
+  min-width: 280px;
+
+  align-items: center;
+  padding-inline: 50px;
+  padding-block: 20px;
+}
+.head p {
+  margin-bottom: 0px;
+  color: white;
+  font-weight: 500;
+}
