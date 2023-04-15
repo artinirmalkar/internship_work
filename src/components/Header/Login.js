@@ -2,8 +2,8 @@ import React from "react";
 import "./Login.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
+
 const Login = (props) => {
-const Login = props => {
   const onChange = () => {};
   return (
     <div className="MainBody">
