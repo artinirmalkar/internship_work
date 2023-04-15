@@ -1,11 +1,13 @@
 import React from "react";
-import Login from "./Header/Login";
-import TopFooter from "./Footer/TopFooter";
-import Footer from "./Footer/Footer";
-import Banner from "./Header/Banner";
+import NavBar from "../../CommonComponent/NavBar";
+import Login from "../../Auth/Login";
+import Banner from "../../CommonComponent/Banner";
+import TopFooter from "../../CommonComponent/TopFooter";
+import Footer from "../../CommonComponent/Footer";
 const EmpLogin = () => {
   return (
     <>
+    <NavBar/>
       <Banner heading="Connect with the best candidates directly,with ease!">
         <Login
           heading="Login/Sign up With a Code"

@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 // import * as ReactDOMClient from "react-dom/client";
 
 import Carousel from "react-simply-carousel";
-import Card from "../../static/Single Component/Card";
+import Card from "./Card";
 
 function MainCarousel() {
   useEffect(() => {
@@ -22,7 +22,7 @@ function MainCarousel() {
     "aman",
     "yash",
     "pankaj",
-    "anshu",
+    "anshu"
   ];
   const positions = [
     "Software Engineer",
@@ -34,7 +34,7 @@ function MainCarousel() {
     "Human Resources Manager",
     "Customer Service Representative",
     "Product Manager",
-    "Web Developer",
+    "Web Developer"
   ];
   const descs = [
     "Thanks to the job portal, I was able to find my dream job in just a few weeks!",
@@ -46,7 +46,7 @@ function MainCarousel() {
     "I found the job portal's salary estimator tool to be extremely helpful in negotiating my job offer.",
     "The job portal's interview preparation resources helped me feel confident and well-prepared for my job interviews.",
     "The job portal's career advice articles and forums provided me with valuable insights and tips for advancing my career.",
-    "I would highly recommend the job portal to anyone looking for a job, as it made the entire job search process much easier and more efficient.",
+    "I would highly recommend the job portal to anyone looking for a job, as it made the entire job search process much easier and more efficient."
   ];
 
   return (
@@ -65,8 +65,8 @@ function MainCarousel() {
 
               justifyContent: "space-around",
 
-              userSelect: "none",
-            },
+              userSelect: "none"
+            }
           }}
           preventScrollOnSwipe
           swipeTreshold={60}
@@ -85,8 +85,8 @@ function MainCarousel() {
 
               minWidth: 60,
 
-              alignSelf: "center",
-            },
+              alignSelf: "center"
+            }
           }}
           backwardBtnProps={{
             children: "<",
@@ -100,8 +100,8 @@ function MainCarousel() {
 
               minWidth: 60,
 
-              alignSelf: "center",
-            },
+              alignSelf: "center"
+            }
           }}
           dotsNav={{
             show: true,
@@ -116,8 +116,8 @@ function MainCarousel() {
 
                 border: 0,
 
-                display: "none",
-              },
+                display: "none"
+              }
             },
 
             activeItemBtnProps: {
@@ -132,14 +132,14 @@ function MainCarousel() {
 
                 background: "black",
 
-                display: "none",
-              },
-            },
+                display: "none"
+              }
+            }
           }}
           itemsToShow={3}
           speed={400}
         >
-          {Array.from({ length: 10 }).map((item, index) => (
+          {Array.from({ length: 10 }).map((item, index) =>
             <div key={index}>
               <div data-aos="fade-in" data-aos-duration="3000">
                 <Card
@@ -150,7 +150,7 @@ function MainCarousel() {
               </div>
               {/* <CardDesc desc={descs[index % descs.length]} /> */}
             </div>
-          ))}
+          )}
         </Carousel>
       </div>
     </div>

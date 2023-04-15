@@ -1,12 +1,14 @@
 import React from 'react'
-import Banner from './Header/Banner';
-import Register from './Header/Register';
-import TopFooter from './Footer/TopFooter';
-import Footer from './Footer/Footer';
+import NavBar from '../../CommonComponent/NavBar';
+import Banner from '../../CommonComponent/Banner';
+import Register from '../../Auth/Register';
+import TopFooter from '../../CommonComponent/TopFooter';
+import Footer from '../../CommonComponent/Footer';
 
 const EmpRegister = () => {
   return (
     <>
+    <NavBar/>
     <Banner heading="Connect with the best candidates directly,with ease!">
     <Register
         heading="REGISTER"

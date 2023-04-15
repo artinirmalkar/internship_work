@@ -1,6 +1,6 @@
 import React from "react";
 import "./QRcode.css";
-import NavBar from "../Header/NavBar";
+import NavBar from "../../CommonComponent/NavBar";
 
 export default function QRcode() {
   return (
@@ -8,8 +8,8 @@ export default function QRcode() {
       <NavBar />
       <div className="QRpage">
         <h1>ewqudwqu</h1>
-        <div className="QRpage-left"></div>
-        <div className="QRpage-right"></div>
+        <div className="QRpage-left" />
+        <div className="QRpage-right" />
       </div>
     </div>
   );

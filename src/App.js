@@ -1,9 +1,8 @@
-import NavBar from "./components/Header/NavBar";
-import EmpLogin from "./components/EmpLogin";
-import Landing from "./components/Landing";
-import EmpRegister from "./components/EmpRegister";
+import Landing from "./components/Pages/Landing/Landing";
+import EmpLogin from "./components/Pages/EmpLogin/EmpLogin";
+import EmpRegister from "./components/Pages/EmpRegister/EmpRegister";
+import QRcode from "./components/Pages/QR Download Section/QRcode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import QRcode from "./components/DownloadSection/QRcode";
 
 function App() {
   return (

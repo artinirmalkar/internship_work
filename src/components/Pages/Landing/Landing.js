@@ -1,12 +1,12 @@
 import React from "react";
-import Counter from "./Main/Counter";
-import Banner from "./Header/Banner";
-import TopFooter from "./Footer/TopFooter";
-import Footer from "./Footer/Footer";
-import Features from "./Main/Features";
-import MainCarousel from "./Main/MainCarosusel";
-import HireCandidate from "./Header/HireCandidate";
-import NavBar from "./Header/NavBar";
+import Counter from "./Counter";
+import Banner from "../../CommonComponent/Banner";
+import TopFooter from "../../CommonComponent/TopFooter";
+import Footer from "../../CommonComponent/Footer";
+import Features from "./Features";
+import MainCarousel from "./MainCarosusel";
+import HireCandidate from "./HireCandidate";
+import NavBar from "../../CommonComponent/NavBar";
 import { NavLink } from "react-router-dom";
 
 export default function Landing() {
@@ -36,7 +36,7 @@ export default function Landing() {
             />
           </NavLink>
         }
-      ></NavBar>
+      />
 
       <Banner heading="Enabling jobs for millions of talented workers">
         <HireCandidate />

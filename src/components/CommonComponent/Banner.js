@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Banner.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import HireCandidate from "./HireCandidate";
+// import HireCandidate from "../Pages/Landing/HireCandidate";
 
 const Banner = props => {
   useEffect(() => {
