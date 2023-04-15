@@ -4,14 +4,16 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import HireCandidate from "./HireCandidate";
 
-const Banner = (props) => {
+const Banner = props => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
     <div className="banner" data-aos="fade-in">
       <div className="bannerleft">
-        <p>{props.heading}</p>
+        <p>
+          {props.heading}
+        </p>
       </div>
 
       {/* <HireCandidate /> */}

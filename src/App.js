@@ -1,6 +1,7 @@
 import NavBar from "./components/Header/NavBar";
-import Employer from "./components/Employer";
+import EmpLogin from "./components/EmpLogin";
 import Landing from "./components/Landing";
+import EmpRegister from "./components/EmpRegister";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Landing />} />
-          <Route path="/employer" element={<Employer />} />
-          {/* <Route path='/login'  element={<Login/>}/> */}
+          <Route path="/EmpLogin" element={<EmpLogin />} />
+          <Route path="/EmpRegister" element={<EmpRegister />} />
         </Route>
       </Routes>
     </BrowserRouter>
