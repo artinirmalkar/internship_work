@@ -5,6 +5,7 @@ import Employers from "./components/CommonComponent/Footer/Employers";
 import PrivacyPolicy from "./components/CommonComponent/Footer/PrivacyPolicy";
 import QRcode from "./components/Pages/QR Download Section/QRcode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TermsAndCondition from "./components/CommonComponent/Footer/TermsAndCondition";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/EmpRegister" element={<EmpRegister />} />
         <Route path="/Employers" element={<Employers />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
       </Routes>
     </BrowserRouter>
   );
