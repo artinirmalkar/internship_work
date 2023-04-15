@@ -1,11 +1,12 @@
 import React from "react";
 import "./QRcode.css";
 import NavBar from "../../CommonComponent/NavBar";
+import RightNavQR from "./RightNavQR";
 
 export default function QRcode() {
   return (
     <div>
-      <NavBar children2="login/Register" />
+      <NavBar myStyle={{ borderBottom: "none" }} children2={<RightNavQR />} />
       <div className="QRpage">
         <h1>ewqudwqu</h1>
         <div className="QRpage-left" />

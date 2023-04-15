@@ -1,0 +1,19 @@
+.Login {
+  background-color: white;
+
+  margin-left: 30vw;
+  border-radius: 5px;
+}
+
+.Login p {
+  padding: 5px 10px;
+  color: #3a2a88d0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 0px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+}
