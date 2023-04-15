@@ -17,8 +17,8 @@
 }
 /* --------------------Banner right card---------------- */
 .bannerright {
-  width: 40vw;
-  padding-inline: 10%;
+  /* width: 40vw; */
+  /* padding-inline: 10%; */
 }
 .hireacandidate {
   border-top-right-radius: 10px;
@@ -86,7 +86,7 @@
   .bannerright {
     width: 100vw;
     padding-inline: 10%;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 10%;
   }
   .Card {
