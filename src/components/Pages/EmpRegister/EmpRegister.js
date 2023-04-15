@@ -1,26 +1,27 @@
-import React from 'react'
-import NavBar from '../../CommonComponent/NavBar';
-import Banner from '../../CommonComponent/Banner';
-import Register from '../../Auth/Register';
-import TopFooter from '../../CommonComponent/TopFooter';
-import Footer from '../../CommonComponent/Footer';
+import React from "react";
+import NavBar from "../../CommonComponent/NavBar";
+import Banner from "../../CommonComponent/Banner";
+import Register from "../../Auth/Register";
+import TopFooter from "../../CommonComponent/TopFooter";
+import Footer from "../../CommonComponent/Footer";
+import Navjob from "../EmpLogin/Navjob";
 
 const EmpRegister = () => {
   return (
     <>
-    <NavBar/>
-    <Banner heading="Connect with the best candidates directly,with ease!">
-    <Register
-        heading="REGISTER"
-        confirmation="Already have an account?"
-        back="Login"
-      />
-    </Banner>
-        
+      <NavBar children2={<Navjob />} myStyle={{ borderBottom: "none" }} />
+      <Banner heading="Connect with the best candidates directly,with ease!">
+        <Register
+          heading="REGISTER"
+          confirmation="Already have an account?"
+          back="Login"
+        />
+      </Banner>
+
       <TopFooter />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default EmpRegister
+export default EmpRegister;
