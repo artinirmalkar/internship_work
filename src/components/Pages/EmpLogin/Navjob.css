@@ -13,3 +13,7 @@
   color: white;
   font-weight: 500;
 }
+
+.head a {
+  text-decoration: none;
+}
