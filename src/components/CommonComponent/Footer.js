@@ -19,7 +19,7 @@ function Footer() {
             <Link to="/Employers">Employers</Link>
           </li>
           <li>
-            <a href="#">Candidates</a>
+            <Link to="/QRcode">Candidates</Link>
           </li>
         </ul>
       </div>
