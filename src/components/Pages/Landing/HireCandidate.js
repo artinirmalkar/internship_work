@@ -26,7 +26,7 @@ export default function HireCandidate() {
         <a href="#" className="job">
           <div className="Card findajob">
             <div className="cardleft ">
-              <Link to="./QRcode">
+              <Link to="/QRcode">
                 <p className="I1">Find a Job</p>
               </Link>
               <a href="#">
