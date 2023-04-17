@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Login = props => {
-  const onChange = () => {};
   return (
     <div className="MainBody">
       <div className="TopDetail">
@@ -35,12 +34,11 @@ const Login = props => {
             <ReCAPTCHA
               className="inputCheckbox"
               sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
-              onChange={onChange}
             />
-            <button className="buton" type="submit">
-              LOGIN
-            </button>
           </form>
+          <button className="buton" type="submit">
+            LOGIN
+          </button>
         </div>
       </div>
       <div className="textalign">

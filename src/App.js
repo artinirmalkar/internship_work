@@ -3,6 +3,7 @@ import EmpLogin from "./components/Pages/EmpLogin/EmpLogin";
 import EmpRegister from "./components/Pages/EmpRegister/EmpRegister";
 import Employers from "./components/CommonComponent/Footer/Employers";
 import PrivacyPolicy from "./components/CommonComponent/Footer/PrivacyPolicy";
+import Support from "./components/CommonComponent/Footer/Support";
 import QRcode from "./components/Pages/QR Download Section/QRcode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TermsAndCondition from "./components/CommonComponent/Footer/TermsAndCondition";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Employers" element={<Employers />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
+        <Route path="/Support" element={<Support />} />
       </Routes>
     </BrowserRouter>
   );

@@ -26,10 +26,10 @@ function Footer() {
       <div className="third textalign col-md-3 col-lg-2">
         <ul>
           <li>
-            <a href="#">Login/Register</a>
+            <Link to="/EmpLogin">Login/Register</Link>
           </li>
           <li>
-            <a href="#">Supports</a>
+            <Link to="/Support">Supports</Link>
           </li>
           <li>
             <Link to="/TermsAndCondition">Terms & Conditions</Link>

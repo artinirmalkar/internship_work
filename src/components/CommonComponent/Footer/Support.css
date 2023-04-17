@@ -1,0 +1,25 @@
+.Main {
+  width: 50%;
+  margin: 5% auto;
+}
+
+.Top {
+  text-align: center;
+}
+
+.width {
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+
+button{
+    background-color: rgb(98, 68, 229);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
