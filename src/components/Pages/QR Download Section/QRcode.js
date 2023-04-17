@@ -3,6 +3,7 @@ import "./QRcode.css";
 import NavBar from "../../CommonComponent/NavBar";
 import RightNavQR from "./RightNavQR";
 import Footer from "../../CommonComponent/Footer";
+import img from "../../../static/images/Newsletter - 960x1152.png";
 
 export default function QRcode() {
   return (
@@ -10,10 +11,7 @@ export default function QRcode() {
       <NavBar myStyle={{ borderBottom: "none" }} children2={<RightNavQR />} />
       <div className="QRpage">
         <div className="QRpage-left">
-          <img
-            src="https://cdn.apna.co/cloudinary/download_page_images/desktop-banner.png?w=1920&q=75"
-            alt=""
-          />
+          <img src={img} alt="" />
         </div>
         <div className="QRpage-right">
           <h1>Download The Zaajira App !</h1>
