@@ -7,6 +7,7 @@ import Support from "./components/CommonComponent/Footer/Support";
 import QRcode from "./components/Pages/QR Download Section/QRcode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TermsAndCondition from "./components/CommonComponent/Footer/TermsAndCondition";
+import AfterLogin from "./components/Pages/After Login/AfterLogin";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
         <Route path="/Support" element={<Support />} />
+        <Route path="/AfterLogin" element={<AfterLogin />} />
       </Routes>
     </BrowserRouter>
   );
