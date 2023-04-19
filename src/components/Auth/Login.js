@@ -14,7 +14,7 @@ const Login = props => {
           <form action="#">
             <input
               type="email"
-              placeholder="Email or Phone number"
+              placeholder="Email or Phone"
               className="inputText"
               required
             />{" "}
