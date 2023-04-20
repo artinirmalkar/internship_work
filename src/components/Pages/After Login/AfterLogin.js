@@ -8,6 +8,7 @@ export default function AfterLogin() {
     <div>
       <MainNavbar />
       {/* <Searchbar /> */}
+      Welcome to After Login Landing Page
       <Filter />
       <Footer />
     </div>

@@ -1,39 +1,40 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Login.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import AfterLogin from "../Pages/After Login/AfterLogin";
 
-const Login = (props) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const Login = props => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     // simulate API call with a delay of 1 second
     setTimeout(() => {
       // check if email and password match a predefined value
-      if (email === 'zaajira123@gmail.com' && password === 'zaajira') {
+      if (email === "zaajira123@gmail.com" && password === "Zaajira@123") {
         setIsLoggedIn(true);
         // <Link to= "/AfterLogin"></Link>
       } else {
-        alert('Invalid email or password');
+        alert("Invalid email or password");
       }
     }, 1000);
   };
 
   if (isLoggedIn) {
     // if user is logged in, redirect to the home page
-    window.location.replace('/AfterLogin');
+    window.location.replace("/AfterLogin");
     return null; // return null to prevent rendering anything else
   }
 
   return (
-
     <div className="MainBody">
       <div className="TopDetail">
-        <h4>{props.heading}</h4>
+        <h4>
+          {props.heading}
+        </h4>
         <div className="form">
           <form action="#" onSubmit={handleSubmit}>
             <input
@@ -41,30 +42,31 @@ const Login = (props) => {
               placeholder="Email or Phone"
               className="inputText"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-             
-            />{" "}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
             <br />
             <input
               type="password"
               placeholder="Password"
               className="inputText"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-             
+              onChange={e => setPassword(e.target.value)}
+              required
+              pattern="^(?=.*[a-zA-Z0-9 @]).{8,16}$"
+              title="Atleat 1 small letter, 1 capital letter, 0-9 number and @ is required"
             />
             <input
               type="checkbox"
               name="remeber me"
               className="inputCheckbox"
-            />{" "}
+            />
             Remember Me
             <ReCAPTCHA
               className="inputCheckbox"
               sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
             />
-        
-        {/* <Link to = "/AfterLogin"> */}
+            {/* <Link to = "/AfterLogin"> */}
             <button className="buton" type="submit">
               LOGIN
             </button>
@@ -73,10 +75,14 @@ const Login = (props) => {
         </div>
       </div>
       <div className="textalign">
-        <span>{props.confirmation}</span>
+        <span>
+          {props.confirmation}
+        </span>
         <Link to="/EmpRegister">Register</Link>
         <br />
-        <a href="#">{props.back}</a>
+        <a href="#">
+          {props.back}
+        </a>
       </div>
     </div>
   );
