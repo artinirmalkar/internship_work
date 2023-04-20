@@ -1,14 +1,16 @@
 import React from "react";
-import ProfileCard from "./ProfileCard";
-// import FilterComp from "./FilterComp";
+import Filter from "./Filter";
 
 export default function AfterLogin() {
   return (
     <div>
+      <MainNavbar />
+      {/* <Searchbar /> */}
       <div>
         {/* <FilterComp /> */}
         {/* <ProfileCard /> */}
       </div>
+      <Footer />
     </div>
   );
 }
