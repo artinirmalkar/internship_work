@@ -6,8 +6,8 @@ export default function AfterLogin() {
   return (
     <div>
       <div>
-        <FilterComp />
-        <ProfileCard />
+        {/* <FilterComp /> */}
+        {/* <ProfileCard /> */}
       </div>
     </div>
   );
