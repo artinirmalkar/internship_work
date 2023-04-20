@@ -1,7 +1,8 @@
 /* --------------------Banner right card---------------- */
 .bannerright {
   width: 40vw;
-  padding-inline: 10%;
+  padding-left: 15%;
+  padding-bottom: 25%;
 }
 .hireacandidate {
   border-top-right-radius: 10px;
@@ -15,12 +16,14 @@
 .Card {
   background-color: white;
   padding-inline: 8%;
-  padding-top: 9%;
+  /* padding-top: 9%; */
   display: flex;
   width: 22vw;
-  justify-content: space-between;
+
+  /* column-gap: 20px; */
   align-items: center;
   border-bottom: 2px solid #d3d3d4;
+  padding: 18px;
 }
 .cardleft {
   display: flex;
