@@ -1,4 +1,6 @@
 import React from "react";
+import MainNavbar from "../../CommonComponent/MainNavbar";
+import Footer from "../../CommonComponent/Footer";
 import Filter from "./Filter";
 
 export default function AfterLogin() {
