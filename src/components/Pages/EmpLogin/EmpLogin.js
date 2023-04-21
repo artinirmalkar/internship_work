@@ -18,7 +18,7 @@ const EmpLogin = () => {
       </Banner>
 
       <TopFooter />
-      <Footer />
+      <Footer login="Login/Register" />
     </>
   );
 };

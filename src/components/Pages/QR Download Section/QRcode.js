@@ -35,7 +35,7 @@ export default function QRcode() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer login="Login/Register" />
     </div>
   );
 }

@@ -6,24 +6,27 @@ import DropdownNav from "../Pages/After Login/DropdownNav";
 import Zaajiralogo from "../../static/images/logo.PNG";
 
 const NavBar = (props) => {
- 
   return (
     <>
       <Navbar className="navbar" expand="lg">
         <Navbar.Brand className="navleft">
-          <NavLink to="/">
+          <NavLink to="/AfterLogin">
             <img src={Zaajiralogo} alt="" />
           </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto navcenter " >
+          <Nav className="me-auto navcenter ">
             <DropdownNav name="JOBS" value1="CREATE" value2="VIEW" />
             <button
               className="btn btn-secondary "
               type="button"
               aria-expanded="false"
-              style={{backgroundColor:"rgb(97, 70, 227)", border:"none", fontWeight:"bolder"}}
+              style={{
+                backgroundColor: "rgb(97, 70, 227)",
+                border: "none",
+                fontWeight: "bolder",
+              }}
             >
               Message{" "}
             </button>

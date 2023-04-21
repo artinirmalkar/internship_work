@@ -1,7 +1,9 @@
 import React from "react";
 import MainNavbar from "../../CommonComponent/MainNavbar";
-import Footer from "../../CommonComponent/Footer";
+import Searchbar from "./Searchbar";
+import FilterComp from "./FilterComp";
 import Filter from "./Filter";
+import MainFooter from "../../CommonComponent/MainFooter";
 
 export default function AfterLogin() {
   return (
@@ -9,10 +11,10 @@ export default function AfterLogin() {
       <MainNavbar />
       {/* <Searchbar /> */}
       <div>
-        {/* <FilterComp /> */}
+        <FilterComp />
         {/* <ProfileCard /> */}
       </div>
-      <Footer />
+      <MainFooter />
     </div>
   );
 }

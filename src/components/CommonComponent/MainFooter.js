@@ -3,7 +3,7 @@ import "./Footer.css";
 import image from "../../static/images/logo.PNG";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-function Footer(props) {
+function MainFooter(props) {
   return (
     <div className="footer row mright">
       <div className="first textalign col-md-6">
@@ -25,9 +25,9 @@ function Footer(props) {
       </div>
       <div className="third textalign col-md-3 col-lg-2">
         <ul>
-          <li>
+          {/* <li>
             <Link to="/EmpLogin">Login/Register</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/Support">Supports</Link>
           </li>
@@ -68,4 +68,4 @@ function Footer(props) {
   );
 }
 
-export default Footer;
+export default MainFooter;

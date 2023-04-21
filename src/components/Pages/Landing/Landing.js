@@ -45,7 +45,7 @@ export default function Landing() {
       <Counter countIncrease="5000" />
       <MainCarousel />
       <TopFooter />
-      <Footer title="Zaajira" />
+      <Footer title="Zaajira" login="Login/Register" />
     </div>
   );
 }
