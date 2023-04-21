@@ -34,11 +34,11 @@ const NavBar = (props) => {
               name="PROFILE"
               value1="EDIT"
               value2="NEW USER"
-              value3="VIEW USERS"
+              value3="VIEW USERS" 
             />
             <DropdownNav
               name="SETTING"
-              value1="CREATE PASSWORD"
+              value1="Change Password"
               value2="LOGOUT"
             />
           </Nav>

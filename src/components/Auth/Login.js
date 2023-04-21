@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-import AfterLogin from "../Pages/After Login/AfterLogin";
 
 const Login = props => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -16,12 +16,15 @@ const Login = props => {
       // check if email and password match a predefined value
       if (email === "zaajira123@gmail.com" && password === "Zaajira@123") {
         setIsLoggedIn(true);
-        // <Link to= "/AfterLogin"></Link>
       } else {
         alert("Invalid email or password");
       }
     }, 1000);
   };
+
+  function handlePasswordToggle() {
+    setPasswordVisible(!passwordVisible);
+  }
 
   if (isLoggedIn) {
     // if user is logged in, redirect to the home page
@@ -43,34 +46,51 @@ const Login = props => {
               className="inputText"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              required
-            />
+            />{" "}
             <br />
             <input
-              type="password"
               placeholder="Password"
               className="inputText"
               value={password}
+              type={passwordVisible ? "text" : "password"}
               onChange={e => setPassword(e.target.value)}
-              required
               pattern="^(?=.*[a-zA-Z0-9 @]).{8,16}$"
-              title="Atleat 1 small letter, 1 capital letter, 0-9 number and @ is required"
+              title="Atleast 1 character should be small letter, 1 character should be capital letter, numbers between 0-9 and @ is required "
             />
+            <button
+              type="button"
+              onClick={handlePasswordToggle}
+              style={{
+                position: "absolute",
+                right: "100px",
+                paddingBlock: "0px",
+                backgroundColor: "transparent",
+                margin: "21px 0px 0px 0px"
+              }}
+            >
+              {passwordVisible
+                ? <i
+                    class="fa-solid fa-eye"
+                    style={{ color: "rgb(97, 70, 227)" }}
+                  />
+                : <i
+                    class="fa-solid fa-eye-slash"
+                    style={{ color: "rgb(97, 70, 227)" }}
+                  />}
+            </button>
             <input
               type="checkbox"
               name="remeber me"
               className="inputCheckbox"
-            />
+            />{" "}
             Remember Me
             <ReCAPTCHA
               className="inputCheckbox"
               sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
             />
-            {/* <Link to = "/AfterLogin"> */}
             <button className="buton" type="submit">
               LOGIN
             </button>
-            {/* </Link> */}
           </form>
         </div>
       </div>
