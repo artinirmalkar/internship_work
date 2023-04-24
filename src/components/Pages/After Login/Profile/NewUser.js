@@ -7,19 +7,19 @@ import ToastContainer from "../ToastContainer";
 import Footer from "../../../CommonComponent/Footer";
 const NewUser = () => {
   // const notify = () => toast("You don't have any plan");
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  const handleClick = () => {
-    setIsVisible(!isVisible);
+  // const handleClick = () => {
+  //   setIsVisible(!isVisible);
 
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
-  };
+  //   setTimeout(() => {
+  //     setIsVisible(false);
+  //   }, 3000);
+  // };
   return (
     <div>
       <MainNavbar />
-      <div
+      {/* <div
         className="main"
         style={{
           margin: " 1rem 2rem 0rem 2rem",
@@ -41,10 +41,10 @@ const NewUser = () => {
           </div>
         </div>
         <hr />
-      </div>
+      </div> */}
 
       <AddUser />
-      <div
+      {/* <div
         style={{
           marginBottom: "5rem",
           width: "100vw",
@@ -53,7 +53,7 @@ const NewUser = () => {
         }}
       >
         <button>SUBMIT EMPLOYES</button>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
