@@ -1,0 +1,27 @@
+input:focus {
+    outline: none;
+  }
+
+  input{
+                background-color: rgb(234, 234, 234);
+                  border: none;
+                  padding: 10px 20px 10px 5px;
+                  margin: 10px;
+                  width: 23vw;
+  }                                       
+
+  .input button{
+ flex: 1 0 130px;
+  }  
+  
+  @media screen and (width<=500px){
+   input{
+    width: 90vw;
+    margin: none;
+   }
+    .input button{
+      flex-basis: 90vw;
+      margin: none;
+      margin: 1rem;
+    }
+  }

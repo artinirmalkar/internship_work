@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 function MainFooter(props) {
   return (
-    <div className="footer row mright">
+    <div className="footer row mright" style={props.mystyle}>
       <div className="first textalign col-md-6">
         <img src={image} alt="logo" />
         <p>

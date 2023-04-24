@@ -8,6 +8,11 @@ import QRcode from "./components/Pages/QR Download Section/QRcode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TermsAndCondition from "./components/CommonComponent/Footer/TermsAndCondition";
 import AfterLogin from "./components/Pages/After Login/AfterLogin";
+import NewUser from "./components/Pages/After Login/Profile/NewUser";
+import ViewUser from "./components/Pages/After Login/Profile/ViewUser";
+import Edit from "./components/Pages/After Login/Profile/Edit";
+import Messages from "./components/Pages/After Login/Messages";
+import ChangePassword from "./components/Pages/After Login/Settings/ChangePassword";
 
 function App() {
   return (
@@ -22,6 +27,12 @@ function App() {
         <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
         <Route path="/Support" element={<Support />} />
         <Route path="/AfterLogin" element={<AfterLogin />} />
+        <Route path="/NewUser" element={<NewUser />} />
+        <Route path="/ViewUser" element={<ViewUser />} />
+        <Route path="/Edit" element={<Edit />} />
+        <Route path="/Messages" element={<Messages />} />
+        <Route path="/ChangePassword" element={<ChangePassword />} />
+        <Route path="/Landing" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   );
