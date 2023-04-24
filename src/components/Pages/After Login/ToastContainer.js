@@ -1,6 +1,6 @@
 import React from "react";
 
-const ToastContainer = ({ message }) => {
+const ToastContainer = props => {
   return (
     <div
       id="mytoast"
@@ -10,10 +10,12 @@ const ToastContainer = ({ message }) => {
         width: "15rem",
         padding: "10px",
         textAlign: "center",
-        display: "none"
+        position: "fixed",
+        top: "20%px",
+        right: "40%"
       }}
     >
-      {message}
+      {props.message}
     </div>
   );
 };
