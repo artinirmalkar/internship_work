@@ -1,8 +1,12 @@
 import React from "react";
+import Footer from "../../../CommonComponent/Footer";
+import MainNavbar from "../../../CommonComponent/MainNavbar";
 
 const ViewUser = () => {
   return (
-    <div style={{ margin: "1rem 2rem" }}>
+    <>   
+    <MainNavbar/>
+     <div style={{ margin: "1rem 2rem" }}>
       <h4>Users</h4>
       <table border="1" style={{ width: "100%" }}>
         <tr>
@@ -14,6 +18,9 @@ const ViewUser = () => {
         </tr>
       </table>
     </div>
+    <Footer/>
+    </>
+
   );
 };
 

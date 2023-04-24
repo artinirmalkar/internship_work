@@ -1,9 +1,12 @@
 import React from 'react'
+import MainNavbar from '../../../CommonComponent/MainNavbar';
+import Footer from '../../../CommonComponent/Footer';
 
 const ChangePassword = () => {
   return (
     <>
-       <div className="main" style={{margin:" 1rem 2rem"}}>
+    <MainNavbar/>
+       <div className="main" style={{margin:" 2rem 2rem 9rem 2rem"}}>
         <h4>Change Password</h4>
         <hr />
         <form style={{display:"flex", flexWrap:"wrap"}}>
@@ -13,6 +16,7 @@ const ChangePassword = () => {
         </form>
         <hr />
        </div>
+        <Footer/>
     </>
   )
 }

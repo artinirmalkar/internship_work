@@ -4,9 +4,9 @@ import Searchbar from "./Searchbar";
 import FilterComp from "./FilterComp";
 import Filter from "./Filter";
 import MainFooter from "../../CommonComponent/MainFooter";
-import ChangePassword from "./ChangePassword";
-import NewUser from "./NewUser";
-import ViewUser from "./ViewUser";
+import ChangePassword from "./Settings/ChangePassword";
+import NewUser from "./Profile/NewUser";
+import ViewUser from "./Profile/ViewUser";
 
 export default function AfterLogin() {
   return (
@@ -14,8 +14,8 @@ export default function AfterLogin() {
       <MainNavbar />
       {/* <Searchbar /> */}
       {/* <ChangePassword /> */}
-      <NewUser />
-      <ViewUser />
+      {/* <NewUser /> */}
+      {/* <ViewUser /> */}
       {/* <FilterComp /> */}
       {/* <ProfileCard /> */}
 
