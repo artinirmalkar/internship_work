@@ -9,7 +9,7 @@ export default function HireCandidate() {
         <a href="#">
           <div className="Card hireacandidate ">
             <div className="cardleft ">
-              <Link to="./EmpLogin">
+              <Link to="/EmpLogin">
                 <p className="I1">Hire a Candidate</p>
               </Link>
               <a href="#">

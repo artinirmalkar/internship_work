@@ -9,8 +9,9 @@ const MainNavbar = () => {
   return (
     <>
       <Navbar className="navbar" expand="lg">
-        <Navbar.Brand className="navleft">
-          <NavLink to="/AfterLogin">
+        <Navbar.Brand className="navleft">                   
+        
+          <NavLink to="/AfterLogin">               
             <img src={Zaajiralogo} alt="" />
           </NavLink>
         </Navbar.Brand>
