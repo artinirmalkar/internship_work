@@ -13,7 +13,8 @@ import ViewUser from "./components/Pages/After Login/Profile/ViewUser";
 import Edit from "./components/Pages/After Login/Profile/Edit";
 import Messages from "./components/Pages/After Login/Messages";
 import ChangePassword from "./components/Pages/After Login/Settings/ChangePassword";
-
+// import Demo from "./components/Pages/After Login/Demoo";
+import AddUser from "./components/Pages/After Login/Profile/AddUser";
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +34,7 @@ function App() {
         <Route path="/Messages" element={<Messages />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
         <Route path="/Landing" element={<Landing />} />
+        {/* <Route path="/e" element={<AddUser />} /> */}
       </Routes>
     </BrowserRouter>
   );

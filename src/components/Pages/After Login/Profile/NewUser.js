@@ -14,7 +14,7 @@ const NewUser = () => {
         className="main"
         style={{
           margin: " 1rem 2rem 0rem 2rem",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
         }}
       >
         <div
@@ -22,7 +22,7 @@ const NewUser = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <h4>Create Users</h4>
@@ -40,7 +40,7 @@ const NewUser = () => {
           marginBottom: "5rem",
           width: "100vw",
           display: "flex",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <button>SUBMIT EMPLOYES</button>
