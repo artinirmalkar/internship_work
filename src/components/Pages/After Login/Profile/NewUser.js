@@ -1,12 +1,21 @@
-import React from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Footer from "../../../CommonComponent/Footer";
+import React, { useState } from "react";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import MainNavbar from "../../../CommonComponent/MainNavbar";
 import AddUser from "./AddUser";
+import ToastContainer from "../ToastContainer";
+import Footer from "../../../CommonComponent/Footer";
 const NewUser = () => {
-  const notify = () => toast("You don't have any plan");
+  // const notify = () => toast("You don't have any plan");
+  const [isVisible, setIsVisible] = useState(false);
 
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 3000);
+  };
   return (
     <div>
       <MainNavbar />
@@ -27,8 +36,8 @@ const NewUser = () => {
         >
           <h4>Create Users</h4>
           <div>
-            <button onClick={notify}>ADD USER+</button>
-            <ToastContainer />
+            {isVisible && <ToastContainer message="You don't have any plan" />}
+            <button onClick={handleClick}>ADD USER+</button>
           </div>
         </div>
         <hr />
