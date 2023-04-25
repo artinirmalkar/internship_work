@@ -16,8 +16,8 @@ const myStyle={
       </Dropdown.Toggle>
 
       <Dropdown.Menu >
-        <Dropdown.Item href="#/action-1">CREATE</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">VIEW</Dropdown.Item>
+        <Dropdown.Item ><Link to="/JobCreate">CREATE</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/ViewView">VIEW</Link></Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
     <button> <Link to="/Message">Message</Link> </button>

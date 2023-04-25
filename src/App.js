@@ -13,6 +13,8 @@ import ViewUser from "./components/Pages/After Login/Profile/ViewUser";
 import Edit from "./components/Pages/After Login/Profile/Edit";
 import Messages from "./components/Pages/After Login/Messages";
 import ChangePassword from "./components/Pages/After Login/Settings/ChangePassword";
+import JobCreate from "./components/Pages/After Login/Jobs/JobCreate";
+import JobView from "./components/Pages/After Login/Jobs/JobView";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/Messages" element={<Messages />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
         <Route path="/Landing" element={<Landing />} />
+        <Route path="/JobCreate" element={<JobCreate />} />
+        <Route path="/JobView" element={<JobView />} />
       </Routes>
     </BrowserRouter>
   );

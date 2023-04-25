@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import MainNavbar from "../../../CommonComponent/MainNavbar";
 import AddUser from "./AddUser";
 import ToastContainer from "../ToastContainer";
 import Footer from "../../../CommonComponent/Footer";
 const NewUser = () => {
-  // const notify = () => toast("You don't have any plan");
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClick = () => {
