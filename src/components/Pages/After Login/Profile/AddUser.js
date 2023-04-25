@@ -16,19 +16,10 @@ const AddUser = () => {
     }
   };
 
-  // const handleClick = () => {
-  //   setIsVisible(!isVisible);
-
-  //   setTimeout(() => {
-  //     setIsVisible(false);
-  //   }, 3000);
-  // };
   const [formval, setformval] = useState([
     { name: "", email: "", password: "" },
   ]);
-  // const adduser = () => {
-  //   setformval([...formval, { name: "", email: "", password: "" }]);
-  // };
+
   const handleremove = (i) => {
     const newformval = [...formval];
     newformval.splice(i, 1);
@@ -132,6 +123,7 @@ const AddUser = () => {
         }}
       >
         <button>SUBMIT EMPLOYES</button>
+        {console.log(formval)}
       </div>
       {/* -------------------------------------------------- */}
       {/* <button>Add</button>
