@@ -37,6 +37,10 @@ function App() {
         <Route path="/Messages" element={<Messages />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
         <Route path="/Landing" element={<Landing />} />
+        <Route path="/CreateJob" element={<CreateJob />} />
+        <Route path="/JobCreate" element={<JobCreate />} />
+        <Route path="/JobView" element={<JobView />} />
+        <Route path="/AddUser" element={<AddUser />} />
       </Routes>
     </BrowserRouter>
   );

@@ -7,12 +7,14 @@ import MainFooter from "../../CommonComponent/MainFooter";
 import ChangePassword from "./Settings/ChangePassword";
 import NewUser from "./Profile/NewUser";
 import ViewUser from "./Profile/ViewUser";
+import CreateJob from "./Jobs/CreateJob";
 
 export default function AfterLogin() {
   return (
     <div>
       <MainNavbar />
-      {/* <Searchbar /> */}
+
+      <Searchbar />
       {/* <ChangePassword /> */}
       {/* <NewUser /> */}
       {/* <ViewUser /> */}

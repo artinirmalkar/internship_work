@@ -1,0 +1,95 @@
+.footer {
+    background-color: rgb(98, 68, 229);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    width: 100vw;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+  }
+  .mright{
+   
+    margin-right: calc(0 * var(--bs-gutter-x)) !important;
+  }
+  .textalign ul li {
+    list-style: none;
+    padding: 5px 0px;
+  }
+  .textalign ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .first {
+    text-align: left;
+  }
+  .first p {
+    color: white;
+  }
+  .forth h3 {
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+  .icon {
+    display: flex;
+  }
+  icon ul li {
+    margin: 5px;
+  }
+  .icon a {
+    margin: 0px 5px;
+  }
+  .fa-brands {
+    padding: 5px 8px;
+    border-radius: 80%;
+    color: rgb(98, 68, 229);
+    background-color: white;
+  }
+  .topFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+  }
+  .topFooter h3{
+    margin-left: 20px;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  .topFooter img{
+   width: 50%;
+   height:10%;
+  
+  }
+  
+  .bannerfooter{
+    height: 20%;
+    background-color: rgb(97, 70, 227);
+    display: none;
+    justify-content: space-around;
+    gap: 10%;
+  }
+  .bannerfooter p{
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    }
+  .bannerfooter img{
+    width: 10rem;
+    
+  }
+  @media screen and (width<=770px) {
+    .topFooter{
+      display: none;
+    }
+    .bannerfooter{
+      display: flex;
+      padding: 10px;
+    }
+  
+  }

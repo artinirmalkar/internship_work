@@ -3,11 +3,13 @@
   display: flex;
   justify-content: space-around;
   padding: 2rem;
+  width: 100vw;
   text-align: left;
+  /* position: relative;
+  bottom: 0; */
 }
 .mright{
-  /* margin-right:none !important;
-  margin-left:none !important; */
+ 
   margin-right: calc(0 * var(--bs-gutter-x)) !important;
 }
 .textalign ul li {

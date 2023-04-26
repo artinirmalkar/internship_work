@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import './ChangePassword.css'
 import MainNavbar from '../../../CommonComponent/MainNavbar';
-import Footer from '../../../CommonComponent/Footer';
+import MainFooter from '../../../CommonComponent/MainFooter';
+import ToastContainer from '../ToastContainer';
+
 
 const ChangePassword = () => {
+  const[showToast, setShowToast]=useState(false)
   const [passwordVisible, setPasswordVisible]= useState(false)
   const [confirmPassVisible, setConfirmPassVisible]= useState(false)
   const handleOnClick =()=>{
@@ -14,33 +18,87 @@ const ChangePassword = () => {
   const handleOnSubmit=(e)=>{
     e.preventDefault();
   }
+
+
+const handleChangePass=()=>{
+ setShowToast(true)
+}
+
   return (
     <>
+       { showToast ? <ToastContainer message="Fill the correct fields"/> :" "}
     <MainNavbar/>
-       <div className="main" style={{margin:" 1rem", height:"45vh"}}>
+       <div className="main" >
         <h4>Change Password</h4>
         <hr />
         <form action="/" onSubmit={handleOnSubmit}>
-        <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"start"}}>
-          <div style={{margin:"1rem"}}>
+        <div className='form' >
+          <div className='inputArea'>
              <input type={passwordVisible?"text":"password"} placeholder='New Password'  required/>
-             <button onClick={handleOnClick}>{passwordVisible?"H":"s"}</button>
+     
+             <button
+                onClick={handleOnClick}
+              style={{
+               
+                paddingBlock: "0px",
+                backgroundColor: "transparent",
+                marginLeft: "-40px",
+                padding: "0px"
+              }}
+            >
+              {passwordVisible ? (
+                <i
+                  class="fa-solid fa-eye"
+                  style={{ color: "rgb(97, 70, 227)" }}
+                />
+              ) : (
+                <i
+                  class="fa-solid fa-eye-slash"
+                  style={{ color: "rgb(97, 70, 227)" }}
+                />
+              )}
+            </button>
           </div>
-          <div style={{margin:"1rem"}}>
+          <div className='inputArea'>
               <input type={confirmPassVisible?"text":"password"} placeholder='Confirm Password' required/>
-             <button onClick={handleClick}>{confirmPassVisible?"H":"S"}</button></div>
+       
+             <button
+            
+              onClick={handleClick}
+              style={{
+                marginLeft: "-40px",
+                  padding: "0px",
+                paddingBlock: "0px",
+                backgroundColor: "transparent",
+                
+              }}
+            >
+             {confirmPassVisible ? (
+                <i
+                  class="fa-solid fa-eye"
+                  style={{ color: "rgb(97, 70, 227)" }}
+                />
+              ) : (
+                <i
+                  class="fa-solid fa-eye-slash"
+                  style={{ color: "rgb(97, 70, 227)" }}
+                />
+              )}
+            </button>
+             </div>
 
       
         <div style={{margin:"1rem 8rem"}}>
-        <button>Change Password</button>
+    
+       <button onClick={handleChangePass}>Change Password</button>
         </div>
         </div>
         </form>
         <hr />
        </div>
-        <Footer/>
+              
+<MainFooter/>
     </>
   )
 }
-
 export default ChangePassword;

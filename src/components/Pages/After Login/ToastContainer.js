@@ -12,7 +12,8 @@ const ToastContainer = props => {
         textAlign: "center",
         position: "fixed",
         top: "20%px",
-        right: "40%"
+        right: "40%",
+        zIndex: "5000"
       }}
     >
       {props.message}
