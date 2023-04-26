@@ -78,22 +78,17 @@ const Login = props => {
                     style={{ color: "rgb(97, 70, 227)" }}
                   />}
             </button>
-            <input
-              type="checkbox"
-              name="remeber me"
-              className="inputCheckbox"
-            />{" "}
-            Remember Me
-            <ReCAPTCHA
-              className="inputCheckbox"
-              sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
-            />
-            <button className="buton" type="submit">
-              LOGIN
-            </button>
           </form>
         </div>
       </div>
+      <input type="checkbox" />Remember Me
+      <ReCAPTCHA
+        className="inputCheckbox"
+        sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
+      />
+      <button className="buton" type="submit">
+        LOGIN
+      </button>
       <div className="textalign">
         <span>
           {props.confirmation}

@@ -15,6 +15,7 @@ import Messages from "./components/Pages/After Login/Messages";
 import ChangePassword from "./components/Pages/After Login/Settings/ChangePassword";
 import JobCreate from "./components/Pages/After Login/Jobs/JobCreate";
 import JobView from "./components/Pages/After Login/Jobs/JobView";
+import CreateJob from "./components/Pages/After Login/Jobs/CreateJob";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Landing" element={<Landing />} />
         <Route path="/JobCreate" element={<JobCreate />} />
         <Route path="/JobView" element={<JobView />} />
+        <Route path="/CreateJob" element={<CreateJob />} />
       </Routes>
     </BrowserRouter>
   );

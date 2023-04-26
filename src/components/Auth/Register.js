@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Login.css";
 import ReCAPTCHA from "react-google-recaptcha";
 const Login = props => {
   const onChange = () => {};
@@ -36,11 +37,7 @@ const Login = props => {
               className="inputText"
               required
             />
-            <input
-              type="checkbox"
-              name="remeber me"
-              className="inputCheckbox"
-            />
+            <input type="checkbox" name="remeber me" />
             Remember Me
             <ReCAPTCHA
               className="inputCheckbox"

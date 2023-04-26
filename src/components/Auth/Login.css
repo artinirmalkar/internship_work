@@ -1,5 +1,5 @@
 .MainBody {
-  width: 30%;
+  width: 33%;
   margin: 5rem;
   border-radius: 10px;
   background-color: white;
@@ -13,23 +13,6 @@
 form {
   width: 100%;
 }
-
-/* trail of icon */
-/* 
-.password {
-  width: 100%;
-  position: relative;
-}
-
-.passleft {
-  width: 75%;
-  position: absolute;
-}
-.icon {
-  width: 25%;
-  position: absolute;
-} */
-
 .inputText {
   width: 90%;
   margin: 20px;

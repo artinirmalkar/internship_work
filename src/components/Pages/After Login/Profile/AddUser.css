@@ -3,15 +3,18 @@ input:focus {
   }
 
   input{
-                background-color: rgb(234, 234, 234);
-                  border: none;
-                  padding: 10px 20px 10px 5px;
-                  margin: 10px;
-                  width: 23vw;
+    border: none;
+    background-color: rgb(234, 234, 234);
+    margin-right: 10px;
+    padding: 10px 20px 10px 5px;
+    width: 23vw;
+    border-radius: 10px;
+    justify-content: center;
   }                                       
 
   .input button{
  flex: 1 0 130px;
+
   }  
   
   @media screen and (width<=500px){

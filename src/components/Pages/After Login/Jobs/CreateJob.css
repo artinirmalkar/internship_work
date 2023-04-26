@@ -1,0 +1,20 @@
+.TopRow{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.TopRow label{
+    font-weight: bolder;
+}
+.TopInput{
+    flex-basis: 15rem;
+
+    
+}
+
+ .TopInput input{
+    width: 30vw;
+    padding: 10px;
+ }
