@@ -4,10 +4,11 @@ import AddUser from "./AddUser";
 import ToastContainer from "../ToastContainer";
 import Footer from "../../../CommonComponent/Footer";
 const NewUser = () => {
+  // const notify = () => toast("You don't have any plan");
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleClick = () => {
-    setIsVisible(!isVisible);
+  // const handleClick = () => {
+  //   setIsVisible(!isVisible);
 
     setTimeout(() => {
       setIsVisible(false);
@@ -16,11 +17,11 @@ const NewUser = () => {
   return (
     <div>
       <MainNavbar />
-      <div
+      {/* <div
         className="main"
         style={{
           margin: " 1rem 2rem 0rem 2rem",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
         }}
       >
         <div
@@ -28,7 +29,7 @@ const NewUser = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <h4>Create Users</h4>
@@ -38,19 +39,19 @@ const NewUser = () => {
           </div>
         </div>
         <hr />
-      </div>
+      </div> */}
 
       <AddUser />
-      <div
+      {/* <div
         style={{
           marginBottom: "5rem",
           width: "100vw",
           display: "flex",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <button>SUBMIT EMPLOYES</button>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

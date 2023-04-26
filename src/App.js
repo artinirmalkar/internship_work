@@ -16,7 +16,8 @@ import ChangePassword from "./components/Pages/After Login/Settings/ChangePasswo
 import JobCreate from "./components/Pages/After Login/Jobs/JobCreate";
 import JobView from "./components/Pages/After Login/Jobs/JobView";
 import CreateJob from "./components/Pages/After Login/Jobs/CreateJob";
-
+// import Demo from "./components/Pages/After Login/Demoo";
+import AddUser from "./components/Pages/After Login/Profile/AddUser";
 function App() {
   return (
     <BrowserRouter>
@@ -36,9 +37,6 @@ function App() {
         <Route path="/Messages" element={<Messages />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
         <Route path="/Landing" element={<Landing />} />
-        <Route path="/JobCreate" element={<JobCreate />} />
-        <Route path="/JobView" element={<JobView />} />
-        <Route path="/CreateJob" element={<CreateJob />} />
       </Routes>
     </BrowserRouter>
   );
