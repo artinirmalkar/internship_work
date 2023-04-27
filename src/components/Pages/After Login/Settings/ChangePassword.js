@@ -36,8 +36,7 @@ const handleChangePass=()=>{
           <div className='inputArea'>
              <input type={passwordVisible?"text":"password"} placeholder='New Password'  required/>
      
-             <button
-                onClick={handleOnClick}
+             <button   onClick={handleOnClick}
               style={{
                
                 paddingBlock: "0px",
@@ -63,11 +62,10 @@ const handleChangePass=()=>{
               <input type={confirmPassVisible?"text":"password"} placeholder='Confirm Password' required/>
        
              <button
-            
-              onClick={handleClick}
+             onClick={handleClick}
               style={{
                 marginLeft: "-40px",
-                  padding: "0px",
+                padding: "0px",
                 paddingBlock: "0px",
                 backgroundColor: "transparent",
                 

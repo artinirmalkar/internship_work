@@ -1,0 +1,30 @@
+.card:hover {
+box-shadow: 0px 0px 8px 7px  #cccccc;
+    -webkit-box-shadow: 3px 2px 5px 3px  #cccccc;
+    -moz-box-shadow: 0px 0px 5px 3px #cccccc;
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  .card{
+    background-color:rgb(234, 234, 234);
+   border-radius:20px;
+   height:25rem;
+   width:16rem;
+   margin:2%; 
+    padding:25px; 
+   border:none;
+   border: 1px solid #d0dae6;
+   transition: all 0.9 ease-in-out;
+  }
+
+  .chooseplanbtn{
+   background-color: rgb(98, 68, 229) ;
+   border: none;
+  }
+
+  .chooseplanbtn:hover{
+    background-color: rgb(118, 93, 231);
+    font-size: 15px;
+  }

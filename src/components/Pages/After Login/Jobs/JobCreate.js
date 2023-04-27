@@ -7,10 +7,11 @@ const JobCreate = () => {
   return (
     <div>
       <MainNavbar />
+
       <div>
         <p style={{ fontSize: "40px", textAlign: "center" }}>Pricing Plans</p>
       </div>
-      <div style={{ width: "100vw" }}>
+      <div style={{ width: "100%" }}>
         <PricingPlansCard
           jobs="3 Jobs per month"
           monthlyprice="TZS 102000.00"

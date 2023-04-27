@@ -83,6 +83,7 @@ const AddUser = () => {
                 name="name"
                 value={item.name}
                 onChange={e => handleinput(e, i)}
+                style={{ marginTop: "5px" }}
               />
             </div>
             <div className=" input">
@@ -93,6 +94,7 @@ const AddUser = () => {
                 value={item.email}
                 name="email"
                 onChange={e => handleinput(e, i)}
+                style={{ marginTop: "5px" }}
               />
             </div>
             <div className="input">
@@ -110,7 +112,7 @@ const AddUser = () => {
                 style={{
                   paddingBlock: "0px",
                   backgroundColor: "transparent",
-                  marginLeft: "-20px",
+                  marginLeft: "-25px",
                   padding: "0px"
                 }}
               >

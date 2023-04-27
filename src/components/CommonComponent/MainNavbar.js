@@ -5,10 +5,10 @@ import Navbar from "react-bootstrap/Navbar";
 import DropdownNav from "../Pages/After Login/DropdownNav";
 import Zaajiralogo from "../../static/images/logo.PNG";
 
-const MainNavbar = () => {
+const MainNavbar = (props) => {
   return (
     <>
-      <Navbar className="navbar" expand="lg">
+      <Navbar className="navbar" expand="lg" style={props.myStyle}>
         <Navbar.Brand className="navleft">                   
         
           <NavLink to="/AfterLogin">               

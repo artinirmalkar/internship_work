@@ -10,6 +10,7 @@ input:focus {
     width: 23vw;
     border-radius: 10px;
     justify-content: center;
+    
   }                                       
 
   .input button{
@@ -28,3 +29,6 @@ input:focus {
       margin: 1rem;
     }
   }
+
+
+  

@@ -1,0 +1,57 @@
+
+.formContainer{
+    background-color: white;
+   
+   }
+    .container {
+     display: flex;
+     flex-wrap: wrap;
+   }
+   lable{
+     font-weight: bolder;
+   }
+   .box {
+     width:  28%;
+     margin: 20px ;
+       box-sizing: border-box;
+     display: inline-block;
+     margin-inline-start: 45px ;
+   }
+   
+ 
+   
+   .box input{
+     padding-inline-start: 15px;
+     border-radius: 5px !important;
+     width: 90%;
+     background-color: rgb(234, 234, 234);
+   }
+
+select option:hover{
+  background-color: rgb(97, 70, 227) !important;
+}
+
+
+   @media screen and (width<= 1200px) {
+     .box {
+       width: 28%;
+       margin-inline-start: none;
+       margin: 5px;
+    
+     }
+   
+    
+   }
+   
+   @media screen and (width<= 768px) {
+     .box {
+       width: 90%;
+      margin-left: 20px;
+      margin-top: 20px;
+     }
+    textarea{
+       width: 100%;
+     }
+    
+   }
+   

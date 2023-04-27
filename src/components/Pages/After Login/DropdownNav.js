@@ -1,7 +1,7 @@
 import React from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
-
+import './DropdownNav.css'
 const DropdownNav = () => {
 const myStyle={
  backgroundColor:"rgb(97, 70, 227)",

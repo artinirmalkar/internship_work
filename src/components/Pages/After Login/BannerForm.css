@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainBanner  {
+    height: 30vh;
+    /* background-color: rgb(98, 68, 229); */
+}
