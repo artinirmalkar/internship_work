@@ -1,38 +1,38 @@
-import Card from "react-bootstrap/Card";
+// import { useState } from "react";
 
-function CardDesc() {
-  return (
-    <Card
-      className="text-left"
-      style={{
-        position: "fixed",
-        top: "15%",
-        width: "40vw",
-        margin: "auto",
-        zIndex: "5000",
-        left: "30%"
-      }}
-    >
-      <Card.Header>Choose Description</Card.Header>
-      <Card.Body>
-        <input
-          type="text"
-          placeholder="Enter New Description"
-          style={{
-            width: "100%",
+// import Modal from "react-bootstrap/Modal";
 
-            backgroundColor: "transparent",
-            border: "1px solid rgb(203, 203, 203)"
-          }}
-        />
+// function Example() {
+//   const [show, setShow] = useState(false);
 
-        <div style={{ marginLeft: "20rem" }}>
-          <button style={{ margin: "10px" }}>Cancle</button>
-          <button style={{ margin: "10px" }}>OK</button>
-        </div>
-      </Card.Body>
-    </Card>
-  );
-}
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
 
-export default CardDesc;
+//   return (
+//     <>
+//       <button variant="primary" onClick={handleShow}>
+//         Launch demo modal
+//       </button>
+
+//       <Modal show={show} onHide={handleClose}>
+//         <Modal.Header closeButton>
+//           <Modal.Title>Choose Description</Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+// <input type="text" placeholder="Enter New Description" style={{backgroundColor:"white", border:"1px solid gray", width:"100%"}}/>
+
+//         </Modal.Body>
+//         <Modal.Footer>
+//           <button onClick={handleClose}>
+//             Close
+//           </button>
+//           <button onClick={handleClose}>
+//             Save Changes
+//           </button>
+//         </Modal.Footer>
+//       </Modal>
+//     </>
+//   );
+// }
+
+// export default Example;

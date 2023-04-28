@@ -1,14 +1,57 @@
 import React, {useState} from 'react'
 import Select from "react-select";
 import './BasicDetails.css'
-import CardDesc from '../CardDesc';
-
-
+// import CardDesc from '../CardDesc';
+import Modal from "react-bootstrap/Modal";
 
 const BasicDetails= () => {
+
+  
   const [selectedOptions, setSelectedOptions] = useState();
-  const[IsVisible, setIsVisible]=useState(false)
-  const optionList = [
+  // const[showModal, setShowModal]=useState(false)
+  // ----------------------------------------------MyModal Component--------------------------------------------------------------------
+// const handleModalClick =()=>{
+//   setShowModal(true)
+// }
+//   const closeModal =()=> {
+//     setShowModal(false)
+//   }
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+const MyModal=()=>{
+  return (
+    <>
+      {/* <button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </button> */}
+  
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Choose Description</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+  <input type="text" placeholder="Enter New Description" style={{backgroundColor:"white", border:"1px solid gray", width:"100%"}}/>
+  
+        </Modal.Body>
+        <Modal.Footer>
+          <button onClick={handleClose}>
+            Close
+          </button>
+          <button onClick={handleClose}>
+            Save Changes
+          </button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
+  // ----------------------------------------------MyModal Component--------------------------------------------------------------------
+
+    const optionList = [
     { value: "Kenya", label: "Kenya" },
     { value: "Tanzania", label: "Tanzania" },
     { value: "Uganada", label: "Uganada" }
@@ -18,13 +61,6 @@ const BasicDetails= () => {
   function handleSelect(data) {
     setSelectedOptions(data);
   }
-const handleOnClick=()=>{
-  const timer =  setTimeout(()=>{
-
-    setIsVisible(!IsVisible)
-  });
-
-}
 
 const countries=[
   
@@ -58,8 +94,10 @@ const updateCities=(countryName)=>{
 
   return (
    <>
-   {IsVisible?<CardDesc/>:""}
+   {/* {IsVisible?<CardDesc/>:""} */}
  
+  {show && <MyModal/>}
+
 
   <div className="formContainer">
   <div className="box "> 
@@ -85,7 +123,7 @@ const updateCities=(countryName)=>{
   </div>
   <div className="box">
   <label htmlFor="JobTitle">Job Description* </label> 
-  <button style={{marginLeft:"20px"}} onClick={handleOnClick} required>AI Suggestions</button> <br />
+  <button onClick={handleShow} style={{marginLeft:"20px"}} required>AI Suggestions</button> <br />
   <textarea name="JobDesc" id="" cols="48"  placeholder=' Write Job Description'></textarea>
   </div>
   </div>
