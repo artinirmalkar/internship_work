@@ -12,8 +12,8 @@ const CreateJob = () => {
    <>
    <MainNavbar myStyle={{ borderBottom: "none" }}/>
    <BannerCard/>
-    {/* <BasicDetails/> */}
-     <PricingPlansCard/>
+    <BasicDetails/>
+     {/* <PricingPlansCard/> */}
     {/* <CandidateDetails/> */}
     <MainFooter/>
    </>

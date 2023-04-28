@@ -17,8 +17,8 @@ const myStyle={
       </Dropdown.Toggle>
 
       <Dropdown.Menu >
-        <Dropdown.Item ><Link to="/CreateJob">CREATE</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to="/ViewView">VIEW</Link></Dropdown.Item>
+      <Link to="/CreateJob"> <Dropdown.Item className="dropdown-item" href='/CreateJob'>CREATE</Dropdown.Item></Link>
+      <Link to="/JobView"><Dropdown.Item className="dropdown-item" href='/View'>VIEW</Dropdown.Item></Link>
       </Dropdown.Menu>
     </Dropdown>
     <Dropdown className="mx-2" variant="success" id="dropdown-basic" >
@@ -31,9 +31,9 @@ PROFILE
       </Dropdown.Toggle>
   
       <Dropdown.Menu >
-        <Dropdown.Item > <Link to="/Edit">EDIT</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to = "/NewUser">NEW USER</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to = "/ViewUser">VIEW USER</Link></Dropdown.Item>
+      <Link to="/Edit"> <Dropdown.Item  className="dropdown-item" href='/Edit'> EDIT</Dropdown.Item></Link>
+      <Link to = "/NewUser"> <Dropdown.Item  className="dropdown-item" href='/NewUser'>NEW USER</Dropdown.Item></Link>
+      <Link to = "/ViewUser">  <Dropdown.Item  className="dropdown-item" href='/ViewUser'>VIEW USER</Dropdown.Item></Link>
       </Dropdown.Menu>
     </Dropdown>
 
@@ -43,8 +43,8 @@ PROFILE
       </Dropdown.Toggle>
 
       <Dropdown.Menu >
-        <Dropdown.Item ><Link to="/ChangePassword">CHANGE PASSWORD</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to ="/Landing">LOGOUT</Link></Dropdown.Item>
+      <Link to="/ChangePassword"> <Dropdown.Item  className="dropdown-item" href='/ChangePassword'>CHANGE PASSWORD</Dropdown.Item></Link>
+        <Link to ="/Landing">   <Dropdown.Item  className="dropdown-item" href='ChangePassword'>LOGOUT</Dropdown.Item></Link>
       </Dropdown.Menu>
     </Dropdown>
 

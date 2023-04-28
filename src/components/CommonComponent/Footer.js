@@ -7,7 +7,9 @@ function Footer(props) {
   return (
     <div className="footer row mright">
       <div className="first textalign col-md-6">
-        <img src={image} alt="logo" />
+        <Link to="/">
+          {" "}<img src={image} alt="logo" />
+        </Link>
         <p>
           An integrated AI talent acquisition platform, helping screen <br />
           applicant volumes and connect relevant talent.

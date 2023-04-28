@@ -1,3 +1,10 @@
-#myDropdown .DropdownItem:hover {
-    background-color: red !important;
+/* CSS */
+
+.dropdown-item{
+    color: black !important;
+}
+
+.dropdown-item:hover {
+ background-color: rgb(222, 218, 238)!important;
+ 
 }
