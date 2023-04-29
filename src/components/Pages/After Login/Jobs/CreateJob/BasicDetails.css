@@ -13,19 +13,19 @@
    .box {
      width:  28%;
      margin: 20px ;
-       box-sizing: border-box;
+     box-sizing: border-box;
      display: inline-block;
      margin-inline-start: 45px ;
    }
    
- 
-   
+    
    .box input{
      padding-inline-start: 15px;
      border-radius: 5px !important;
      width: 90%;
      background-color: rgb(234, 234, 234);
    }
+
 
 select option:hover{
   background-color: rgb(97, 70, 227) !important;
@@ -39,8 +39,9 @@ select option:hover{
        margin: 5px;
     
      }
-   
-    
+     .box input{
+      width: 100% !important;
+     }
    }
    
    @media screen and (width<= 768px) {
@@ -52,6 +53,14 @@ select option:hover{
     textarea{
        width: 100%;
      }
-    
+     .box input{
+      width: 100% !important;
+     }
+ button{
+  margin: 5px 0px !important;
+  display: block !important;
+  width: 100% !important;
+ }
+
    }
    

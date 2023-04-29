@@ -1,35 +1,21 @@
 import React, {useState} from 'react'
 import Select from "react-select";
 import './BasicDetails.css'
-// import CardDesc from '../CardDesc';
 import Modal from "react-bootstrap/Modal";
 
 const BasicDetails= () => {
 
   
   const [selectedOptions, setSelectedOptions] = useState();
-  // const[showModal, setShowModal]=useState(false)
-  // ----------------------------------------------MyModal Component--------------------------------------------------------------------
-// const handleModalClick =()=>{
-//   setShowModal(true)
-// }
-//   const closeModal =()=> {
-//     setShowModal(false)
-//   }
-
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+ // ----------------------------------------------MyModal Component Start--------------------------------------------
 const MyModal=()=>{
   return (
     <>
-      {/* <button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </button> */}
-  
-      <Modal show={show} onHide={handleClose}>
+          <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Choose Description</Modal.Title>
         </Modal.Header>
@@ -49,7 +35,7 @@ const MyModal=()=>{
     </>
   );
 }
-  // ----------------------------------------------MyModal Component--------------------------------------------------------------------
+  // ----------------------------------------------MyModal Component End--------------------------------------------------------------------
 
     const optionList = [
     { value: "Kenya", label: "Kenya" },
@@ -94,12 +80,10 @@ const updateCities=(countryName)=>{
 
   return (
    <>
-   {/* {IsVisible?<CardDesc/>:""} */}
- 
+
   {show && <MyModal/>}
 
-
-  <div className="formContainer">
+ <div className="formContainer">
   <div className="box "> 
   <form>
   <label htmlFor="JobTitle">Job Title*</label> <br />
@@ -143,8 +127,7 @@ const updateCities=(countryName)=>{
         style={{border:"none"}}
         required
              >
-        {/* <option value=""   placeholder="Selct Country">Select Country</option> */}
-        {countries.map((country, index) =>
+             {countries.map((country, index) =>
           <option key={index} value={country.name}>
             {country.name}
           </option>
@@ -167,7 +150,7 @@ const updateCities=(countryName)=>{
  </div>
      </div>
    </div>
-   {/* --------------------------------- End location----------------------------- */}
+ 
   <div className="box">
   <label htmlFor="JobTitle">No. Of Vacancies*</label> <br />
   <input type="number" placeholder='Vacancies' required/>

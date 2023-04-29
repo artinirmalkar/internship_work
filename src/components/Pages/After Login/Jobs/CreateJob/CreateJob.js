@@ -5,6 +5,7 @@ import MainFooter from '../../../../CommonComponent/MainFooter'
 import BasicDetails from './BasicDetails'
 import CandidateDetails from './CandidateDetails'
 import PricingPlansCard from '../PricingPlansCard'
+import InterviewQues from './InterviewQues'
 
 
 const CreateJob = () => {
@@ -12,9 +13,10 @@ const CreateJob = () => {
    <>
    <MainNavbar myStyle={{ borderBottom: "none" }}/>
    <BannerCard/>
-    <BasicDetails/>
+    {/* <BasicDetails/> */}
+    <CandidateDetails/>
+    {/* <InterviewQues/> */}
      {/* <PricingPlansCard/> */}
-    {/* <CandidateDetails/> */}
     <MainFooter/>
    </>
   )
