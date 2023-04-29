@@ -1,0 +1,37 @@
+.mainbox {
+  /* height: 60vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 55vw;
+  background-color: rgba(0, 0, 0, 0.269);
+  border-radius: 5px;
+}
+input {
+  font-size: 1.2rem;
+}
+.firstfield {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstfield input {
+  width: 35rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+}
+.comman {
+  /* padding-inline: 1rem; */
+  padding-block: 0.7rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.comman input {
+  height: 3.8rem;
+}
+.lastfield input {
+  width: 5rem;
+}
