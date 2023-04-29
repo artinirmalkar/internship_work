@@ -1,8 +1,7 @@
 import React from "react";
-import MainNavbar from "../../../../CommonComponent/MainNavbar";
-import MainFooter from "../../../../CommonComponent/MainFooter";
+import "./InterviewQues.css";
+import InterResponse from "../InterResponse";
 import InterVirtual from "../InterVirtual";
-
 const InterviewQues = () => {
   return (
     <div>
@@ -10,5 +9,4 @@ const InterviewQues = () => {
     </div>
   );
 };
-
 export default InterviewQues;

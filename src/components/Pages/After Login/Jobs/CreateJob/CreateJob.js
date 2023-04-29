@@ -10,6 +10,7 @@ import InterviewQues from "./InterviewQues";
 const CreateJob = () => {
   return (
     <>
+      <div style={{ backgroundColor: "rgb(234, 234, 234)" }} >
       <MainNavbar myStyle={{ borderBottom: "none" }} />
       <BannerCard />
       {/* <BasicDetails/> */}
@@ -17,6 +18,7 @@ const CreateJob = () => {
       <InterviewQues />
       {/* <PricingPlansCard/> */}
       <MainFooter />
+    </div>
     </>
   );
 };
