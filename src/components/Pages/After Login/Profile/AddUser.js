@@ -27,10 +27,10 @@ const AddUser = () => {
   };
 
   const [formval, setformval] = useState([
-    { name: "", email: "", password: "" },
+    { name: "", email: "", password: "" }
   ]);
 
-  const handleremove = (i) => {
+  const handleremove = i => {
     const newformval = [...formval];
     newformval.splice(i, 1);
     setformval(newformval);
@@ -40,7 +40,7 @@ const AddUser = () => {
     newlst[i][e.target.name] = [e.target.value];
     setformval(newlst);
   };
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault();
   };
 
@@ -49,13 +49,12 @@ const AddUser = () => {
   };
   return (
     <div style={{ margin: "1rem 2rem " }}>
-      {" "}
-      {/* ------------------------------------------------------------ */}
+      {" "}{/* ------------------------------------------------------------ */}
       <div
         className="main"
         style={{
           margin: " 1rem ",
-          justifyContent: "space-between",
+          justifyContent: "space-between"
         }}
       >
         <div
@@ -63,7 +62,7 @@ const AddUser = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <h4>Create Users</h4>
@@ -72,15 +71,14 @@ const AddUser = () => {
             <button onClick={addUser}>ADD USER+</button>
 
             <Link to="/JobCreate">
-              {" "}
-              <button> Select Plan </button>
+              {" "}<button> Select Plan </button>
             </Link>
           </div>
         </div>
         <hr />
       </div>
       <form action="#" onSubmit={onSubmit}>
-        {formval.map((item, i) => (
+        {formval.map((item, i) =>
           <div
             key={i}
             className="form"
@@ -93,7 +91,7 @@ const AddUser = () => {
                 placeholder="Enter Name"
                 name="name"
                 value={item.name}
-                onChange={(e) => handleinput(e, i)}
+                onChange={e => handleinput(e, i)}
                 style={{ marginTop: "5px" }}
               />
             </div>
@@ -104,7 +102,7 @@ const AddUser = () => {
                 placeholder="Enter Email"
                 value={item.email}
                 name="email"
-                onChange={(e) => handleinput(e, i)}
+                onChange={e => handleinput(e, i)}
                 style={{ marginTop: "5px" }}
               />
             </div>
@@ -115,7 +113,7 @@ const AddUser = () => {
                 placeholder="Enter Password"
                 value={item.password}
                 name="password"
-                onChange={(e) => handleinput(e, i)}
+                onChange={e => handleinput(e, i)}
                 style={{ marginRight: "0px" }}
               />
               <button
@@ -124,20 +122,18 @@ const AddUser = () => {
                   paddingBlock: "0px",
                   backgroundColor: "transparent",
                   marginLeft: "-25px",
-                  padding: "0px",
+                  padding: "0px"
                 }}
               >
-                {PasswordVisible ? (
-                  <i
-                    class="fa-solid fa-eye"
-                    style={{ color: "rgb(97, 70, 227)" }}
-                  />
-                ) : (
-                  <i
-                    class="fa-solid fa-eye-slash"
-                    style={{ color: "rgb(97, 70, 227)" }}
-                  />
-                )}
+                {PasswordVisible
+                  ? <i
+                      class="fa-solid fa-eye"
+                      style={{ color: "rgb(97, 70, 227)" }}
+                    />
+                  : <i
+                      class="fa-solid fa-eye-slash"
+                      style={{ color: "rgb(97, 70, 227)" }}
+                    />}
               </button>
             </div>
 
@@ -147,7 +143,7 @@ const AddUser = () => {
                 color: "red",
                 letterSpacing: "1.5px",
                 marginLeft: "20px",
-                marginTop: "35px",
+                marginTop: "35px"
               }}
               onClick={() => handleremove(i)}
             >
@@ -155,7 +151,7 @@ const AddUser = () => {
               <i class="fa-solid fa-trash-can" />
             </button>
           </div>
-        ))}
+        )}
       </form>
       {/* <AddUser /> */}
       <div
@@ -163,7 +159,7 @@ const AddUser = () => {
           marginBottom: "5rem",
           // width: "100vw",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "center"
         }}
       >
         <button>SUBMIT EMPLOYES</button>

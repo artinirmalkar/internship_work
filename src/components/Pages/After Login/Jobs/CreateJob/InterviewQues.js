@@ -1,9 +1,7 @@
 import React from "react";
-import MainNavbar from "../../../../CommonComponent/MainNavbar";
-import MainFooter from "../../../../CommonComponent/MainFooter";
-
+import "./InterviewQues.css";
+import InterResponse from "../InterResponse";
 const InterviewQues = () => {
-  return <div></div>;
+  return <InterResponse />;
 };
-
 export default InterviewQues;
