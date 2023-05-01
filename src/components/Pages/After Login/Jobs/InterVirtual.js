@@ -6,7 +6,7 @@ export default function InterVirtual() {
   const addOption = () => {
     setarrVal([...arrVal, { placeholder: "", value: "" }]);
   };
-  const removeUsers = (i) => {
+  const removeUsers = i => {
     const newArray = [...arrVal];
     newArray.splice(i, 1);
     setarrVal(newArray);
@@ -16,25 +16,22 @@ export default function InterVirtual() {
     <div>
       <div className="mainbox">
         <div className="firstfield comman">
-          {" "}
-          <div>
+          {" "}<div>
             <input
               type="text"
               placeholder="Have you created smart contracts before?"
             />
           </div>
           <div className="marginIcon">
-            {" "}
-            <i
+            {" "}<i
               class="fa-solid fa-trash-can"
               style={{ color: "red", fontSize: "25px" }}
             />
           </div>
         </div>
-        {arrVal.map((item, i) => (
+        {arrVal.map((item, i) =>
           <div className="comman">
-            {" "}
-            <div>
+            {" "}<div>
               <input type="text" placeholder={"Enter Option " + (i + 1)} />
             </div>
             <div style={{ display: "flex" }}>
@@ -46,7 +43,7 @@ export default function InterVirtual() {
                     height: "17px",
                     border: "2px solid",
                     width: "30px",
-                    display: "inline",
+                    display: "inline"
                   }}
                 />
               </div>
@@ -55,49 +52,22 @@ export default function InterVirtual() {
               </div>
             </div>
             <div style={{ marginLeft: "20px" }}>
-              <button onClick={() => removeUsers(i)}>
+              <button
+                onClick={() => removeUsers(i)}
+                style={{ backgroundColor: "white" }}
+              >
                 <i
                   class="fa-solid fa-trash-can"
-                  style={{ color: "red", fontSize: "25px" }}
+                  style={{
+                    color: "red",
+                    fontSize: "25px"
+                  }}
                 />
               </button>
             </div>
           </div>
-        ))}
+        )}
 
-        {/* <div className="comman">
-          {" "}
-          <div>
-            <input
-              type="text"
-              placeholder="Enter Option 1
-"
-            />
-          </div>
-          <div style={{ display: "flex" }}>
-            <div>
-              <input
-                type="checkbox"
-                style={{
-                  fontSize: "10px",
-                  height: "17px",
-                  border: "2px solid",
-                  width: "30px",
-                  display: "inline",
-                }}
-              />
-            </div>
-            <div style={{ width: "70px", fontWeight: "500" }}>
-              Mark As Correct
-            </div>
-          </div>
-          <div style={{ marginLeft: "20px" }}>
-            <i
-              class="fa-solid fa-trash-can"
-              style={{ color: "red", fontSize: "25px" }}
-            />
-          </div>
-        </div> */}
         <div>
           <button style={{ width: "17rem" }} onClick={addOption}>
             ADD OPTION +

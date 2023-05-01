@@ -5,6 +5,7 @@ import InterVirtual from "../InterVirtual";
 const InterviewQues = () => {
   return (
     <div>
+      <InterResponse />
       <InterVirtual />
     </div>
   );
