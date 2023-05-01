@@ -34,6 +34,24 @@ const interviewQuestions= [
         },
         
     ]
+},
+{
+  "question_id": 1976,
+  "job_id": 589,
+  "job_title": "Robotics Engineer",
+  "question": "What is Proteus",
+  "options": [
+      {
+          "question_option_id": 4574,
+          "question_id": 1976,
+          "question_option_title": "Design Suite is a proprietary software tool suite used primarily for electronic design automation",
+      },
+      {
+          "question_option_id": 4575,
+          "question_id": 1976,
+          "question_option_title": "Programming Language"
+      }
+  ]
 }
   // 'What inspired you to become a frontend developer?',
   // 'What are the core principles of responsive web design?',
