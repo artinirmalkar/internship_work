@@ -12,15 +12,42 @@ export default function InterVirtual({ handleremove }) {
     setarrVal(newArray);
   };
 
+// --------------------------------------------addInterviewQuestion------------------------------------------
+
+const [inputValue, setInputValue]= useState(null)
+const interviewQuestions= [
+  'What inspired you to become a frontend developer?',
+  'What are the core principles of responsive web design?',
+  'How do you optimize the performance of a website?',
+  'Can you explain the differences between HTML and XHTML?',
+  'What are some best practices for writing efficient CSS code?'
+]
+const handleQuestionClick = question => {
+  setInputValue(question);
+};
+const handleInputChange = event => {
+  setInputValue(event.target.value);
+};
+
+
+// --------------------------------------------addInterviewQuestion------------------------------------------
+  
+
   return (
     <>  
   
       <div className="mainbox">
       <div className="firstfield comman">
         {" "}<div>
+        {interviewQuestions.map(question => (
+  <div key={question}>
+    <span onClick={() => handleQuestionClick(question)}>{question}</span>
+  </div>
+))}
           <input
             type="text"
             placeholder="Have you created smart contracts before?"
+            value={inputValue} onChange={handleInputChange}
           />
         </div>
         <div className="marginIcon">

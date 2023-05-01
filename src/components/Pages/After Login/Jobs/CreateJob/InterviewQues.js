@@ -17,6 +17,7 @@ const InterviewQues = () => {
   const onSubmit = event => {
     event.preventDefault();
   };
+
   return (
     <div>
       <InterResponse />
