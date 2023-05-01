@@ -1,3 +1,8 @@
+
+.interquestions{
+  display: flex;
+
+}
 .mainbox {
   /* height: 60vh; */
   display: flex;
@@ -6,7 +11,9 @@
   padding: 1rem;
   width: 55vw;
   background-color: white;
-  border-radius: 5px;
+   border-radius: 10px;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 input {
   font-size: 1.2rem;
@@ -34,4 +41,16 @@ input {
 }
 .lastfield input {
   width: 5rem;
+}
+
+.addquestions{
+    background-color: white;
+    width: 40vw;
+    margin-inline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 3rem;
+    border-left: 1px solid rgb(222, 226, 230);
 }
