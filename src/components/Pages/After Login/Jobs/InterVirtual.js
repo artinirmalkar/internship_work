@@ -1,74 +1,69 @@
 import React, { useState } from "react";
 import "./InterVirtual.css";
 
-export default function InterVirtual({ handleremove }) {
-  const [arrVal, setarrVal] = useState([{ value: "" }, { value: "" }]);
-  const addOption = () => {
-    setarrVal([...arrVal, { placeholder: "", value: "" }]);
-  };
-  const removeUsers = i => {
-    const newArray = [...arrVal];
-    newArray.splice(i, 1);
-    setarrVal(newArray);
-  };
+export default function InterVirtual(props) {
+  // const [arrVal, setarrVal] = useState([{ value: "" }, { value: "" }]);
+  // const addOption = () => {
+  //   setarrVal([...arrVal, { placeholder: "", value: "" }]);
+  // };
+  // const removeUsers = i => {
+  //   const newArray = [...arrVal];
+  //   newArray.splice(i, 1);
+  //   setarrVal(newArray);
+  // };
 
 // --------------------------------------------addInterviewQuestion------------------------------------------
 
-const [inputValue, setInputValue]= useState(null)
-const [selectedQuestion, setSelectedQuestion] = useState(null);
+// const [inputValue, setInputValue]= useState(null)
+// const [selectedQuestion, setSelectedQuestion] = useState(null);
 
-const interviewQuestions= [
-  {
-    "question_id": 1975,
-     "question": "What is Arduino?",
-    "options": [
-        {
-            "question_option_id": 4572,
-            "question_id": 1975,
-            "question_option_title": " open-source electronics platform based on easy-to-use hardware and software",
-        },
-        {
-            "question_option_id": 4573,
-            "question_id": 1975,
-            "question_option_title": "scripting language"
-        },
+// const interviewQuestions= [
+//   {
+//     "question_id": 1975,
+//      "question": "What is Arduino?",
+//     "options": [
+//         {
+//             "question_option_id": 4572,
+//             "question_id": 1975,
+//             "question_option_title": " open-source electronics platform based on easy-to-use hardware and software",
+//         },
+//         {
+//             "question_option_id": 4573,
+//             "question_id": 1975,
+//             "question_option_title": "scripting language"
+//         },
         
-    ]
-},
-{
-  "question_id": 1976,
-  "job_id": 589,
-  "job_title": "Robotics Engineer",
-  "question": "What is Proteus",
-  "options": [
-      {
-          "question_option_id": 4574,
-          "question_id": 1976,
-          "question_option_title": "Design Suite is a proprietary software tool suite used primarily for electronic design automation",
-      },
-      {
-          "question_option_id": 4575,
-          "question_id": 1976,
-          "question_option_title": "Programming Language"
-      }
-  ]
-}
-  // 'What inspired you to become a frontend developer?',
-  // 'What are the core principles of responsive web design?',
-  // 'How do you optimize the performance of a website?',
-  // 'Can you explain the differences between HTML and XHTML?',
-  // 'What are some best practices for writing efficient CSS code?'
-]
-const handleQuestionClick = (question) => {
-  setInputValue(question.question);
+//     ]
+// },
+// {
+//   "question_id": 1976,
+//   "job_id": 589,
+//   "job_title": "Robotics Engineer",
+//   "question": "What is Proteus",
+//   "options": [
+//       {
+//           "question_option_id": 4574,
+//           "question_id": 1976,
+//           "question_option_title": "Design Suite is a proprietary software tool suite used primarily for electronic design automation",
+//       },
+//       {
+//           "question_option_id": 4575,
+//           "question_id": 1976,
+//           "question_option_title": "Programming Language"
+//       }
+//   ]
+// }
+// ]
+// const handleQuestionClick = (question) => {
+//   setInputValue(question.question);
 
-    setSelectedQuestion(question);
-    setarrVal(question.options.map(option => ({ value: option.question_option_title })));
+//     setSelectedQuestion(question);
+//     setarrVal(question.options.map(option => ({ value: option.question_option_title })));
   
-};
-const handleInputChange = event => {
-  setInputValue(event.target.value);
-};
+// };
+// const handleInputChange = event => {
+//   setInputValue(event.target.value);
+// };
 
 
 // --------------------------------------------addInterviewQuestion------------------------------------------
@@ -80,20 +75,20 @@ const handleInputChange = event => {
       <div className="mainbox">
       <div className="firstfield comman">
         {" "}<div>
-        {interviewQuestions.map(question => (
+        {/* {interviewQuestions.map(question => (
   <div key={question.question_id}>
   <span onClick={() => handleQuestionClick(question)}>{question.question}</span>
      
   </div>
-))}
+))} */}
           <input
             type="text"
             placeholder="Have you created smart contracts before?"
-            value={inputValue} onChange={handleInputChange}
+            value={props.inputValue} onChange={props.handleInputChange}
           />
         </div>
         <div className="marginIcon">
-          <button onClick={handleremove} style={{ backgroundColor: "white" }}>
+          <button onClick={props.handleremove} style={{ backgroundColor: "white" }}>
             {" "}<i
               class="fa-solid fa-trash-can"
               style={{ color: "red", fontSize: "25px" }}
@@ -102,7 +97,7 @@ const handleInputChange = event => {
         </div>
       </div>
 
-      {arrVal.map((item, i) =>
+      {props.arrVal.map((item, i) =>
         <div className="comman" key={i}>
           {" "}<div>
 
@@ -127,7 +122,7 @@ const handleInputChange = event => {
           </div>
           <div style={{ marginLeft: "20px" }}>
             <button
-              onClick={() => removeUsers(i)}
+              onClick={() => props.removeUsers(i)}
               style={{ backgroundColor: "white" }}
             >
               <i
@@ -143,7 +138,7 @@ const handleInputChange = event => {
       )}
 
       <div>
-        <button style={{ width: "17rem" }} onClick={addOption}>
+        <button style={{ width: "17rem" }} onClick={props.addOption}>
           ADD OPTION +
         </button>
       </div>
