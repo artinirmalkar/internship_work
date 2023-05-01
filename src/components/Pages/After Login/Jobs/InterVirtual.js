@@ -15,15 +15,38 @@ export default function InterVirtual({ handleremove }) {
 // --------------------------------------------addInterviewQuestion------------------------------------------
 
 const [inputValue, setInputValue]= useState(null)
+const [selectedQuestion, setSelectedQuestion] = useState(null);
+
 const interviewQuestions= [
-  'What inspired you to become a frontend developer?',
-  'What are the core principles of responsive web design?',
-  'How do you optimize the performance of a website?',
-  'Can you explain the differences between HTML and XHTML?',
-  'What are some best practices for writing efficient CSS code?'
+  {
+    "question_id": 1975,
+     "question": "What is Arduino?",
+    "options": [
+        {
+            "question_option_id": 4572,
+            "question_id": 1975,
+            "question_option_title": " open-source electronics platform based on easy-to-use hardware and software",
+        },
+        {
+            "question_option_id": 4573,
+            "question_id": 1975,
+            "question_option_title": "scripting language"
+        },
+        
+    ]
+}
+  // 'What inspired you to become a frontend developer?',
+  // 'What are the core principles of responsive web design?',
+  // 'How do you optimize the performance of a website?',
+  // 'Can you explain the differences between HTML and XHTML?',
+  // 'What are some best practices for writing efficient CSS code?'
 ]
-const handleQuestionClick = question => {
-  setInputValue(question);
+const handleQuestionClick = (question) => {
+  setInputValue(question.question);
+
+    setSelectedQuestion(question);
+    setarrVal(question.options.map(option => ({ value: option.question_option_title })));
+  
 };
 const handleInputChange = event => {
   setInputValue(event.target.value);
@@ -40,8 +63,9 @@ const handleInputChange = event => {
       <div className="firstfield comman">
         {" "}<div>
         {interviewQuestions.map(question => (
-  <div key={question}>
-    <span onClick={() => handleQuestionClick(question)}>{question}</span>
+  <div key={question.question_id}>
+  <span onClick={() => handleQuestionClick(question)}>{question.question}</span>
+     
   </div>
 ))}
           <input
@@ -61,9 +85,10 @@ const handleInputChange = event => {
       </div>
 
       {arrVal.map((item, i) =>
-        <div className="comman">
+        <div className="comman" key={i}>
           {" "}<div>
-            <input type="text" placeholder={"Enter Option " + (i + 1)} />
+
+            <input type="text" placeholder={"Enter Option " + (i + 1)} value={item.value}/>
           </div>
           <div style={{ display: "flex" }}>
             <div>
