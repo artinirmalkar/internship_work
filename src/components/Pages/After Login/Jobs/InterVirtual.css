@@ -44,6 +44,8 @@ input {
 }
 
 .addquestions{
+  position: sticky;
+  top: 50px;
     background-color: white;
     width: 40vw;
     margin-inline: none;

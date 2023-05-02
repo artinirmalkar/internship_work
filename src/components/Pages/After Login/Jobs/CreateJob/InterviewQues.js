@@ -3,7 +3,8 @@ import "./InterviewQues.css";
 import InterResponse from "../InterResponse";
 import InterVirtual from "../InterVirtual";
 import "../InterVirtual.css";
-
+import JobView from "../JobView";
+import data from "./data.json";
 const InterviewQues = () => {
   const [arrVal, setarrVal] = useState([{ value: "" }, { value: "" }]);
   const addOption = () => {
@@ -17,50 +18,15 @@ const InterviewQues = () => {
   const [inputValue, setInputValue] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
-  const interviewQuestions = [
-    {
-      question_id: 1975,
-      question: "What is Arduino?",
-      options: [
-        {
-          question_option_id: 4572,
-          question_id: 1975,
-          question_option_title:
-            " open-source electronics platform based on easy-to-use hardware and software"
-        },
-        {
-          question_option_id: 4573,
-          question_id: 1975,
-          question_option_title: "scripting language"
-        }
-      ]
-    },
-    {
-      question_id: 1976,
-      job_id: 589,
-      job_title: "Robotics Engineer",
-      question: "What is Proteus",
-      options: [
-        {
-          question_option_id: 4574,
-          question_id: 1976,
-          question_option_title:
-            "Design Suite is a proprietary software tool suite used primarily for electronic design automation"
-        },
-        {
-          question_option_id: 4575,
-          question_id: 1976,
-          question_option_title: "Programming Language"
-        }
-      ]
-    }
-  ];
-  const handleQuestionClick = question => {
-    setInputValue(question.question);
-
-    setSelectedQuestion(question);
+  const handleQuestionClick = item => {
+    setInputValue(item.question);
+    setformval([...formval, { responsibilitu: " " }]);
+    // document.getElementById("ques").style.display = "none";
+    setSelectedQuestion(item);
     setarrVal(
-      question.options.map(option => ({ value: option.question_option_title }))
+      item.options.map(option => ({
+        value: option.question_option_title
+      }))
     );
   };
   const handleInputChange = event => {
@@ -83,6 +49,7 @@ const InterviewQues = () => {
   return (
     <div>
       <InterResponse />
+
       <div>
         <button
           style={{ width: "17rem", marginInline: "2rem" }}
@@ -121,18 +88,39 @@ const InterviewQues = () => {
             )}
           </form>
         </div>
-        {interviewQuestions.map(question =>
-          <div key={question.question_id}>
-            <div className="addquestions">
-              <span onClick={() => handleQuestionClick(question)}>
+        <div className="addquestions">
+          {/* {interviewQuestions.map(question =>
+            <div key={question.question_id}>
+              <div onClick={() => handleQuestionClick(question)}>
                 {question.question}
-              </span>
-              {/* <span onClick={() => handleQuestionClick(question)}>
-                {question_option_title}
-              </span> */}
+              </div>
             </div>
-          </div>
-        )}
+          )} */}
+
+          {data.map(item =>
+            <div key={item.question_id}>
+              <p onClick={() => handleQuestionClick(item)}>
+                Question: {item.question}
+              </p>
+              <div>
+                {item.options.map(item =>
+                  <div key={item.question_option_id}>
+                    <p
+                      style={{
+                        backgroundColor: "rgb(234, 234, 234)",
+                        height: "4rem",
+                        padding: " 0.5rem 1rem",
+                        borderRadius: "20px"
+                      }}
+                    >
+                      {item.question_option_title}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div>

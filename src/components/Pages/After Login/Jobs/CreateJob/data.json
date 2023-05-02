@@ -1,42 +1,146 @@
 [
-    {
+  {
+    "question_id": 1975,
+    "job_id": 589,
+    "job_title": "Robotics Engineer",
+    "question": "What is Arduino?",
+    "options": [
+      {
+        "question_option_id": 4572,
         "question_id": 1975,
-        "job_id": 589,
-        "job_title": "Robotics Engineer",
-        "question": "What is Arduino?",
-        "options": [
-            {
-                "question_option_id": 4572,
-                "question_id": 1975,
-                "question_option_title": " open-source electronics platform based on easy-to-use hardware and software",
-            },
-            {
-                "question_option_id": 4573,
-                "question_id": 1975,
-                "question_option_title": "scripting language"
-            }
-        ]
-    },
-
-    {
+        "question_option_title": "open-source electronics platform based on easy-to-use hardware and software"
+      },
+      {
+        "question_option_id": 4573,
+        "question_id": 1975,
+        "question_option_title": "scripting language"
+      }
+    ]
+  },
+  {
+    "question_id": 1976,
+    "job_id": 589,
+    "job_title": "Robotics Engineer",
+    "question": "What is Proteus",
+    "options": [
+      {
+        "question_option_id": 4574,
         "question_id": 1976,
-        "job_id": 589,
-        "job_title": "Robotics Engineer",
-        "question": "What is Proteus",
-        "options": [
-            {
-                "question_option_id": 4574,
-                "question_id": 1976,
-                "question_option_title": "Design Suite is a proprietary software tool suite used primarily for electronic design automation",
-            },
-            {
-                "question_option_id": 4575,
-                "question_id": 1976,
-                "question_option_title": "Programming Language"
-            }
-        ]
-    }
+        "question_option_title": "Design Suite is a proprietary software tool suite used primarily for electronic design automation"
+      },
+      {
+        "question_option_id": 4575,
+        "question_id": 1976,
+        "question_option_title": "Programming Language"
+      }
+    ]
+  },
+  {
+    "question_id": 1977,
+    "job_id": 589,
+    "job_title": "Robotics Engineer",
+    "question": "What language is a typical Arduino code based on?",
 
+    "options": [
+      {
+        "question_option_id": 4576,
+        "question_id": 1977,
+        "question_option_title": "Assembly Code"
+      },
+      {
+        "question_option_id": 4577,
+        "question_id": 1977,
+        "question_option_title": "C/C++"
+      }
+    ]
+  },
 
-   
+  {
+    "question_id": 1984,
+
+    "job_id": 592,
+
+    "job_title": "Robotics Engineer",
+
+    "question": "What is Arduino?",
+
+    "options": [
+      {
+        "question_option_id": 4590,
+        "question_id": 1984,
+        "question_option_title": " open-source electronics platform based on easy-to-use hardware and software"
+      },
+      {
+        "question_option_id": 4591,
+        "question_id": 1984,
+        "question_option_title": "scripting language"
+      }
+    ]
+  },
+  {
+    "question_id": 1985,
+
+    "job_id": 592,
+
+    "job_title": "Robotics Engineer",
+
+    "question": "What is the purpose of a gripper in a robot arm?",
+
+    "options": [
+      {
+        "question_option_id": 4592,
+        "question_id": 1985,
+        "question_option_title": "To provide stability"
+      },
+      {
+        "question_option_id": 4593,
+        "question_id": 1985,
+        "question_option_title": "To grasp and manipulate objects"
+      }
+    ]
+  },
+  {
+    "question_id": 1986,
+
+    "job_id": 592,
+
+    "job_title": "Robotics Engineer",
+
+    "question": "What type of actuators are commonly used in robot arms?",
+
+    "options": [
+      {
+        "question_option_id": 4594,
+        "question_id": 1986,
+        "question_option_title": "Hydraulic"
+      },
+      {
+        "question_option_id": 4595,
+        "question_id": 1986,
+        "question_option_title": "Electric"
+      }
+    ]
+  },
+  {
+    "question_id": 1987,
+
+    "job_id": 593,
+
+    "job_title": "Robotics Engineer",
+
+    "question": "What is the main disadvantage of using pneumatic actuators in robots?",
+
+    "options": [
+      {
+        "question_option_id": 4596,
+        "question_id": 1987,
+        "question_option_title": "Limited power"
+      },
+      {
+        "question_option_id": 4597,
+        "question_id": 1987,
+        "question_option_title": "Limited precision"
+      }
+    ]
+  }
 ]
