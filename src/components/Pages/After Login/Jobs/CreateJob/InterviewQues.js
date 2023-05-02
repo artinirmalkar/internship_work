@@ -89,19 +89,14 @@ const InterviewQues = () => {
           </form>
         </div>
         <div className="addquestions">
-          {/* {interviewQuestions.map(question =>
-            <div key={question.question_id}>
-              <div onClick={() => handleQuestionClick(question)}>
-                {question.question}
-              </div>
-            </div>
-          )} */}
-
           {data.map(item =>
             <div key={item.question_id}>
-              <p onClick={() => handleQuestionClick(item)}>
+              <button
+                style={{ backgroundColor: "white", color: "black" }}
+                onClick={() => handleQuestionClick(item)}
+              >
                 Question: {item.question}
-              </p>
+              </button>
               <div>
                 {item.options.map(item =>
                   <div key={item.question_option_id}>
