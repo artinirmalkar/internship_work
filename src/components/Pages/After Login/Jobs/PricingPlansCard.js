@@ -73,7 +73,7 @@ const PricingPlansCard = () => {
       localStorage.setItem("User", adduser);
 
       const timer = setTimeout(() => {
-        window.location.href = "/NewUser";
+        window.location.href = "/BasicDetails";
 
         console.log(adduser);
       }, 3000);

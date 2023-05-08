@@ -6,6 +6,7 @@ import BasicDetails from "./BasicDetails";
 import CandidateDetails from "./CandidateDetails";
 import PricingPlansCard from "../PricingPlansCard";
 import InterviewQues from "./InterviewQues";
+import InterQuesDemo from "./InterQuesDemo";
 
 const CreateJob = () => {
   return (
@@ -15,8 +16,9 @@ const CreateJob = () => {
       <BannerCard />
       {/* <BasicDetails/> */}
       {/* <CandidateDetails/> */}
-      <InterviewQues />
-      {/* <PricingPlansCard/> */}
+      {/* <InterviewQues /> */}
+      {/* <InterQuesDemo/> */}
+      <PricingPlansCard/>
       <MainFooter />
     </div>
     </>

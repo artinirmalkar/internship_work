@@ -3,19 +3,20 @@ import "./InterVirtual.css";
 
 export default function InterVirtual(props) {
   
-
   return (
     <>  
   
       <div className="mainbox">
       <div className="firstfield comman">
         {" "}<div>
-      
-          <input
+   
+              <input
             type="text"
             placeholder="Have you created smart contracts before?"
-            value={props.inputValue} onChange={props.handleInputChange}
-          />
+            value={props.items} onChange={props.handleInputChange} /> 
+          
+    
+       
         </div>
         <div className="marginIcon">
           <button onClick={props.handleremove} style={{ backgroundColor: "white" }}>

@@ -1,63 +1,63 @@
-import React, { useState } from "react";
-import "./InterviewQues.css";
-import InterResponse from "../InterResponse";
+import React, { useEffect, useState } from "react";
 import InterVirtual from "../InterVirtual";
-import "../InterVirtual.css";
 import data from "./data.json";
-const InterviewQues = () => {
-  const [inputValue, setInputValue] = useState(null);
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
+import InterResponse from "../InterResponse";
+
+const InterQuesDemo = () => {
+  const [inputValue, setInputValue] = useState(
+    [
+      // {
+      //   question_id: 1975,
+      //   job_id: 589,
+      //   job_title: "Robotics Engineer",
+      //   question: "What is Arduino?",
+      //   options: [
+      //     {
+      //       question_option_id: 4572,
+      //       question_id: 1975,
+      //       question_option_title:
+      //         "open-source electronics platform based on easy-to-use hardware and software"
+      //     },
+      //     {
+      //       question_option_id: 4573,
+      //       question_id: 1975,
+      //       question_option_title: "scripting language"
+      //     }
+      //   ]
+      // }
+    ]
+  );
+  const [inputFieldList, setinputFieldList] = useState([]);
   const [formval, setformval] = useState([{ responsibility: " " }]);
-  const lastindex = formval.length - 1;
   const [arrVal, setarrVal] = useState([{ value: "" }, { value: "" }]);
-  const [que, setQue] = useState([
-    {
-      question_id: 1975,
-      job_id: 589,
-      job_title: "Robotics Engineer",
-      question: "What is Arduino?",
-      options: [
-        {
-          question_option_id: 4572,
-          question_id: 1975,
-          question_option_title:
-            "open-source electronics platform based on easy-to-use hardware and software"
-        },
-        {
-          question_option_id: 4573,
-          question_id: 1975,
-          question_option_title: "scripting language"
-        }
-      ]
-    }
-  ]);
   const addOption = () => {
     setarrVal([...arrVal, { placeholder: "", value: "" }]);
   };
+
   const removeUsers = i => {
     const newArray = [...arrVal];
     newArray.splice(i, 1);
     setarrVal(newArray);
   };
   const handleQuestionClick = item => {
-    console.log(item);
-    setQue(pre => {
-      return [...pre, item];
-    });
-    // setQue(item);
     setInputValue(item.question);
+    // let arrayList = inputFieldList;
+    inputFieldList.push(inputValue);
+    // arrayList.push(inputValue);
+    // setinputFieldList(arrayList);
+    // console.log(arrayList);
+    // console.log(arrayList);
+    console.log(item.question);
     setformval([...formval, { responsibility: " " }]);
-    setSelectedQuestion(item);
     setarrVal(
       item.options.map(option => ({
         value: option.question_option_title
       }))
     );
-
-    console.log("que", que);
   };
   const handleInputChange = event => {
     setInputValue(event.target.value);
+    // console.log(inputValue);
   };
 
   const addmore = () => {
@@ -72,6 +72,8 @@ const InterviewQues = () => {
     event.preventDefault();
   };
 
+  useEffect(() => {}, [inputValue]);
+
   return (
     <div>
       <InterResponse />
@@ -81,7 +83,7 @@ const InterviewQues = () => {
           style={{ width: "17rem", marginInline: "2rem" }}
           onClick={addmore}
         >
-          ADD OPTION + {que[0].job_id}
+          ADD OPTION +
         </button>
       </div>
       <div
@@ -102,7 +104,7 @@ const InterviewQues = () => {
       >
         <div style={{ display: "flex" }}>
           <form onSubmit={onSubmit}>
-            {que.map((item, i) => {
+            {inputFieldList.map(item =>
               <InterVirtual
                 handleremove={handleremove}
                 handleInputChange={handleInputChange}
@@ -110,32 +112,18 @@ const InterviewQues = () => {
                 addOption={addOption}
                 removeUsers={removeUsers}
                 arrVal={arrVal}
-              />;
-
-              {
-                /* if (i === lastindex) {
-                <InterVirtual
-                  handleremove={handleremove}
-                  handleInputChange={handleInputChange}
-                  inputValue={inputValue}
-                  addOption={addOption}
-                  removeUsers={removeUsers}
-                  arrVal={arrVal}
-                />;
-              } else {
-                <InterVirtual
-                  handleremove={handleremove}
-                  handleInputChange={handleInputChange}
-                  inputValue={inputValue}
-                  addOption={addOption}
-                  removeUsers={removeUsers}
-                  arrVal={arrVal}
-                />;
-              } */
-              }
-            })}
+                items={item}
+              />
+            )}
+            {/* {inputFieldList.map(item =>
+              <h3>
+                {item}
+              </h3>
+            )} */}
           </form>
         </div>
+        {/* ------------------------------------------Add Question Section--------------------------------------------------- */}
+
         <div className="addquestions">
           {data.map(item =>
             <div key={item.question_id}>
@@ -177,4 +165,5 @@ const InterviewQues = () => {
     </div>
   );
 };
-export default InterviewQues;
+
+export default InterQuesDemo;

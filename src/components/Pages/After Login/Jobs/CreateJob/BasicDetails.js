@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import Select from "react-select";
 import './BasicDetails.css'
 import Modal from "react-bootstrap/Modal";
+import MainNavbar from '../../../../CommonComponent/MainNavbar';
+import BannerCard from '../../BannerCard';
+import MainFooter from '../../../../CommonComponent/MainFooter';
 
 const BasicDetails= () => {
 
@@ -80,7 +83,8 @@ const updateCities=(countryName)=>{
 
   return (
    <>
-
+<MainNavbar/>
+<BannerCard/>
   {show && <MyModal/>}
 
  <div className="formContainer">
@@ -199,7 +203,7 @@ const updateCities=(countryName)=>{
  <button>SAVE DRAFT</button>
  <button>NEXT</button>
 </div>
-                     
+      <MainFooter/>               
    </>
   )
 }
