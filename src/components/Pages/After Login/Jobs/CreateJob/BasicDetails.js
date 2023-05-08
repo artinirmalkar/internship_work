@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import MainNavbar from '../../../../CommonComponent/MainNavbar';
 import BannerCard from '../../BannerCard';
 import MainFooter from '../../../../CommonComponent/MainFooter';
+import { Link } from 'react-router-dom';
 
 const BasicDetails= () => {
 
@@ -201,7 +202,7 @@ const updateCities=(countryName)=>{
   </div>
   <div style={{display:"flex", justifyContent:"center", gap:"10px"}}>
  <button>SAVE DRAFT</button>
- <button>NEXT</button>
+  <Link to='/CandidateDetails'> <button>NEXT</button></Link>
 </div>
       <MainFooter/>               
    </>

@@ -18,6 +18,8 @@ import JobView from "./components/Pages/After Login/Jobs/JobView";
 import CreateJob from "./components/Pages/After Login/Jobs/CreateJob/CreateJob";
 import AddUser from "./components/Pages/After Login/Profile/AddUser";
 import BasicDetails from "./components/Pages/After Login/Jobs/CreateJob/BasicDetails";
+import CandidateDetails from "./components/Pages/After Login/Jobs/CreateJob/CandidateDetails";
+import InterviewQues from "./components/Pages/After Login/Jobs/CreateJob/InterviewQues";
 function App() {
   // localStorage.setItem("User", false);
   return (
@@ -43,6 +45,8 @@ function App() {
         <Route path="/JobView" element={<JobView />} />
         <Route path="/AddUser" element={<AddUser />} />
         <Route path="/BasicDetails" element={<BasicDetails />} />
+        <Route path="/CandidateDetails" element={<CandidateDetails />} />
+        <Route path="/InterviewQues" element={<InterviewQues />} />
       </Routes>
     </BrowserRouter>
   );

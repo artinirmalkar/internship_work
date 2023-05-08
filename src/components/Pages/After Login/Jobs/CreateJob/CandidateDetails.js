@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Select from "react-select";
+import MainNavbar from "../../../../CommonComponent/MainNavbar";
+import BannerCard from "../../BannerCard";
+import MainFooter from "../../../../CommonComponent/MainFooter";
 // import "./CandidateDetails.css";
 const CandidateDetails = () => {
   const [selectedOptions, setSelectedOptions] = useState();
@@ -47,14 +51,9 @@ const CandidateDetails = () => {
     setSelectedOptions(data);
   }
   return (
-    // <div
-    //   className="candidateBody"
-    //   style={{
-    //     backgroundColor: "rgb(234, 234, 234)",
-    //     height: "100vh",
-    //     width: "100vw"
-    //   }}
-    // >
+    <>
+<MainNavbar/>
+<BannerCard/>
     <div
       className="form-container"
       style={{
@@ -148,10 +147,11 @@ const CandidateDetails = () => {
       <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
         <button>BACK</button>
         <button>SAVE DRAFT</button>
-        <button>NEXT</button>
+      <Link to='/InterviewQues'> <button>NEXT</button></Link> 
       </div>
     </div>
-    // </div>
+    <MainFooter/>
+    </>
   );
 };
 

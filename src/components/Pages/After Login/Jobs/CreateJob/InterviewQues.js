@@ -4,6 +4,9 @@ import InterResponse from "../InterResponse";
 import InterVirtual from "../InterVirtual";
 import "../InterVirtual.css";
 import data from "./data.json";
+import MainNavbar from "../../../../CommonComponent/MainNavbar";
+import MainFooter from "../../../../CommonComponent/MainFooter";
+import BannerCard from "../../BannerCard";
 const InterviewQues = () => {
   const [inputValue, setInputValue] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
@@ -74,6 +77,8 @@ const InterviewQues = () => {
 
   return (
     <div>
+      <MainNavbar />
+      <BannerCard />
       <InterResponse />
 
       <div>
@@ -113,25 +118,6 @@ const InterviewQues = () => {
               />;
 
               {
-                /* if (i === lastindex) {
-                <InterVirtual
-                  handleremove={handleremove}
-                  handleInputChange={handleInputChange}
-                  inputValue={inputValue}
-                  addOption={addOption}
-                  removeUsers={removeUsers}
-                  arrVal={arrVal}
-                />;
-              } else {
-                <InterVirtual
-                  handleremove={handleremove}
-                  handleInputChange={handleInputChange}
-                  inputValue={inputValue}
-                  addOption={addOption}
-                  removeUsers={removeUsers}
-                  arrVal={arrVal}
-                />;
-              } */
               }
             })}
           </form>
@@ -174,6 +160,7 @@ const InterviewQues = () => {
           ADD OPTION +
         </button>
       </div>
+      <MainFooter />
     </div>
   );
 };
