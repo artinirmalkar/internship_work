@@ -20,6 +20,8 @@ import AddUser from "./components/Pages/After Login/Profile/AddUser";
 import BasicDetails from "./components/Pages/After Login/Jobs/CreateJob/BasicDetails";
 import CandidateDetails from "./components/Pages/After Login/Jobs/CreateJob/CandidateDetails";
 import InterviewQues from "./components/Pages/After Login/Jobs/CreateJob/InterviewQues";
+import Card from "./components/Pages/Landing/Card";
+import Cart from "./Redux/components/Cart";
 function App() {
   // localStorage.setItem("User", false);
   return (
@@ -47,6 +49,8 @@ function App() {
         <Route path="/BasicDetails" element={<BasicDetails />} />
         <Route path="/CandidateDetails" element={<CandidateDetails />} />
         <Route path="/InterviewQues" element={<InterviewQues />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/JobView" element={<JobView />} />
       </Routes>
     </BrowserRouter>
   );
