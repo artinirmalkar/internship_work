@@ -1,50 +1,31 @@
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import MainNavbar from "../../components/CommonComponent/MainNavbar";
 import MainFooter from "../../components/CommonComponent/MainFooter";
-
+import Card from "react-bootstrap/Card";
 const Cart = () => {
   const cartData = useSelector(state => state.cartData);
-  let amount =
-    cartData.length &&
-    cartData.map(item => item.price).reduce((prev, next) => prev + next);
-  console.warn(amount);
   return (
     <div>
       <MainNavbar />
 
-      <Link to="/JobView">Go to Products Link</Link>
-      <h1>Cart Page</h1>
-      <div className="cart-page-container">
-        <table>
-          <tr>
-            <td>job_title</td>
-            <td>question</td>
-            <td>question_option_title</td>
-          </tr>
-          {cartData.map(item =>
-            <tr key={item.key}>
-              <td>
-                {item.job_title}
-              </td>
-              <td>
+      <div>
+        {cartData.map(item =>
+          <Card style={{ width: "90%", height: "50%" }}>
+            <Card.Header key={item.key}>
+              {item.job_title}
+            </Card.Header>
+            <Card.Body>
+              <Card.Title>
                 {item.question}
-              </td>
-
-              {/* <td>
-                {item.options.question_option_title}
-              </td> */}
-
-              <td>
-                {item.options.map(option =>
-                  <div key={option.question_option_id}>
-                    {option.question_option_title}
-                  </div>
-                )}
-              </td>
-            </tr>
-          )}
-        </table>
+              </Card.Title>
+              {item.options.map(option =>
+                <Card.Text key={option.question_option_id}>
+                  {option.question_option_title}
+                </Card.Text>
+              )}
+            </Card.Body>
+          </Card>
+        )}
       </div>
       <MainFooter />
     </div>

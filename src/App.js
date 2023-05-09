@@ -20,7 +20,6 @@ import AddUser from "./components/Pages/After Login/Profile/AddUser";
 import BasicDetails from "./components/Pages/After Login/Jobs/CreateJob/BasicDetails";
 import CandidateDetails from "./components/Pages/After Login/Jobs/CreateJob/CandidateDetails";
 import InterviewQues from "./components/Pages/After Login/Jobs/CreateJob/InterviewQues";
-import Card from "./components/Pages/Landing/Card";
 import Cart from "./Redux/components/Cart";
 function App() {
   // localStorage.setItem("User", false);

@@ -145,7 +145,7 @@ const CandidateDetails = () => {
         </form>
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <button>BACK</button>
+      <Link to='/BasicDetails'>   <button>BACK</button></Link>
         <button>SAVE DRAFT</button>
       <Link to='/InterviewQues'> <button>NEXT</button></Link> 
       </div>
