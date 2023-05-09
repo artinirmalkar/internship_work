@@ -192,52 +192,50 @@ function InterviewQues() {
       <MainNavbar />
       <BannerCard />
       <InterResponse />
-      <div style={{ display: "flex" }}>
-        {/* <div>
-          <InterVirtual />
-        </div> */}
-        {/* <div>
-          <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
-        </div> */}
-        <div className="addquestions">
-          {data.map(item =>
-            <div className="product-item">
-              <div>
-                <button
-                  onClick={() => dispatch(addToCart(item))}
-                  style={{ backgroundColor: "white", color: "black" }}
-                >
-                  Question : {item.question}
-                </button>
-              </div>
-              <div>
-                {item.options.map(option =>
-                  <div key={option.question_option_id}>
-                    <p
-                      style={{
-                        backgroundColor: "rgb(234, 234, 234)",
-                        height: "4rem",
-                        padding: " 0.5rem 1rem",
-                        borderRadius: "20px"
-                      }}
-                    >
-                      {option.question_option_title}
-                    </p>
-                  </div>
-                )}
-              </div>
 
-              <div>
-                {/* <button onClick={() => dispatch(addToCart(item))}>
+      {/* <InterVirtual /> */}
+
+      {/* <div>
+        <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
+      </div> */}
+      <div className="addquestions">
+        {data.map(item =>
+          <div className="product-item">
+            <div>
+              <button
+                onClick={() => dispatch(addToCart(item))}
+                style={{ backgroundColor: "white", color: "black" }}
+              >
+                Question : {item.question}
+              </button>
+            </div>
+            <div>
+              {item.options.map(option =>
+                <div key={option.question_option_id}>
+                  <p
+                    style={{
+                      backgroundColor: "rgb(234, 234, 234)",
+                      height: "4rem",
+                      padding: " 0.5rem 1rem",
+                      borderRadius: "20px"
+                    }}
+                  >
+                    {option.question_option_title}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div>
+              {/* <button onClick={() => dispatch(addToCart(item))}>
                 Add to Cart
               </button> */}
-                {/* <button onClick={() => dispatch(removeToCart(item.id))}>
+              {/* <button onClick={() => dispatch(removeToCart(item.id))}>
                 Remove to Cart
               </button> */}
-              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       <MainFooter />
