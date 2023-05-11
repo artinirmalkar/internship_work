@@ -6,8 +6,11 @@ import BannerCard from "../../BannerCard";
 import MainFooter from "../../../../CommonComponent/MainFooter";
 // import "./CandidateDetails.css";
 const CandidateDetails = () => {
-  const [selectedOptions, setSelectedOptions] = useState();
-
+  const [selectedOptionsExp, setSelectedOptionsExp] = useState();
+  const [selectedOptionsEdu, setSelectedOptionsEdu] = useState();
+  const [selectedOptionsSkills, setSelectedOptionsSkills] = useState();
+  const [selectedOptionsNation, setSelectedOptionsNation] = useState();
+  const [selectedOptionsGender, setSelectedOptionsGender] = useState();
   const optionListExp = [
     { value: "0-1", label: "0-1" },
     { value: "2-3", label: "2-3" },
@@ -46,10 +49,41 @@ const CandidateDetails = () => {
     { value: "Others", label: "Others" }
   ];
 
+
+    // // Function triggered on selection
+    // function handleSelect(selectedOption) {
+    //   setSelectedOption(selectedOption);
+    //   // setSelectedOptions(data);
+    //   console.log(selectedOption);
+    // }
+
   // Function triggered on selection
-  function handleSelect(data) {
-    setSelectedOptions(data);
+  function handleSelectExp(data) {
+    setSelectedOptionsExp(data);
+    console.log("Experience:", data);
   }
+
+  function handleSelectEdu(data) {
+    setSelectedOptionsEdu(data);
+    console.log("Education:", data);
+  }
+
+  function handleSelectSkills(data) {
+    setSelectedOptionsSkills(data);
+    console.log("Skills:", data);
+  }
+
+  function handleSelectNation(data) {
+    setSelectedOptionsNation(data);
+    console.log("Nationality:", data);
+  }
+
+  function handleSelectGender(data) {
+    setSelectedOptionsGender(data);
+    console.log("Gender:", data);
+  }
+
+
   return (
     <>
 <MainNavbar/>
@@ -76,9 +110,12 @@ const CandidateDetails = () => {
           <Select
             options={optionListExp}
             placeholder="Experience in Years"
-            value={selectedOptions}
+            value={selectedOptionsExp}
             isSearchable={true}
             styles={{ border: "none" }}
+            onChange={handleSelectExp}
+            isMulti
+            required
           />
         </form>
       </div>
@@ -90,10 +127,13 @@ const CandidateDetails = () => {
           <br />
           <Select
             options={optionListEdu}
-            placeholder="Education"
+            placeholder="Education in Years"
+            value={selectedOptionsEdu}
             isSearchable={true}
             styles={{ border: "none" }}
+            onChange={handleSelectEdu}
             isMulti
+            required
           />
         </form>
       </div>
@@ -105,12 +145,13 @@ const CandidateDetails = () => {
           <br />
           <Select
             options={optionListSkills}
-            placeholder="Select Skills"
-            value={selectedOptions}
+            placeholder=" Skills"
+            value={selectedOptionsSkills}
             isSearchable={true}
             styles={{ border: "none" }}
-            required
+            onChange={handleSelectSkills}
             isMulti
+            required
           />
         </form>
       </div>
@@ -121,11 +162,14 @@ const CandidateDetails = () => {
           </label>{" "}
           <br />
           <Select
-            options={optionListNation}
-            placeholder="Select Nationality"
-            value={selectedOptions}
+           options={optionListNation}
+            placeholder=" Nationality"
+            value={selectedOptionsNation}
             isSearchable={true}
             styles={{ border: "none" }}
+            onChange={handleSelectNation}
+            isMulti
+            required
           />
         </form>
       </div>
@@ -136,11 +180,14 @@ const CandidateDetails = () => {
           </label>{" "}
           <br />
           <Select
-            options={optionListGender}
-            placeholder="Select Gender"
-            value={selectedOptions}
+           options={optionListGender}
+            placeholder=" Gender"
+            value={selectedOptionsGender}
             isSearchable={true}
             styles={{ border: "none" }}
+            onChange={handleSelectGender}
+            isMulti
+            required
           />
         </form>
       </div>

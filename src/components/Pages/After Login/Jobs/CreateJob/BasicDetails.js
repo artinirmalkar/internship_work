@@ -92,7 +92,7 @@ const updateCities=(countryName)=>{
   <div className="box "> 
   <form>
   <label htmlFor="JobTitle">Job Title*</label> <br />
-  <input type="text"  placeholder='Job title' required/>
+  <input type="text"  placeholder='Job title' style={{width:"100%"}} required/>
  </form>  
   </div>
   <div className="box  dropdown-container">
@@ -113,7 +113,7 @@ const updateCities=(countryName)=>{
   <div className="box">
   <label htmlFor="JobTitle">Job Description* </label> 
   <button onClick={handleShow} style={{marginLeft:"20px"}} required>AI Suggestions</button> <br />
-  <textarea name="JobDesc" id="" cols="48"  placeholder=' Write Job Description'></textarea>
+  <input type='text' name="JobDesc"  placeholder=' Write Job Description' style={{width:"100%"}}></input>
   </div>
   </div>
 {/* ---------------------------------location----------------------------- */}
@@ -158,7 +158,7 @@ const updateCities=(countryName)=>{
  
   <div className="box">
   <label htmlFor="JobTitle">No. Of Vacancies*</label> <br />
-  <input type="number" placeholder='Vacancies' required/>
+  <input type="number" placeholder='Vacancies' style={{width:"100%"}} required/>
   </div>
   <div className="box">
   <label htmlFor="JobTitle">Currency</label> <br />
@@ -176,12 +176,13 @@ const updateCities=(countryName)=>{
   </div>
   <div className="formContainer">
   <div className="box">  <label htmlFor="JobTitle">Min. Salary/Month**</label> <br />
-  <input type="number" placeholder='Min. Salary/Month' required/> </div>
+  <input type="number" placeholder='Min. Salary/Month' style={{width:"100%"}}  required/> </div>
   <div className="box"> <label htmlFor="JobTitle">Max. Salary/Month*</label> <br />
-  <input type="number" placeholder='Max. Salary/Month' required/></div>
+  <input type="number" placeholder='Max. Salary/Month' style={{width:"100%"}} required/></div>
   <div className="box"> <label htmlFor="JobTitle">Type of Job*</label> <br />
   
   <Select
+            
             options={optionList}
             placeholder="Select Job Type"
             value={selectedOptions}
@@ -189,6 +190,7 @@ const updateCities=(countryName)=>{
             isSearchable={true}
             styles={{ border: "none" , width:"40%"}}
            required
+           style={{backgroundColor:"rgb(234, 234, 234)"}}
           >
  </Select>
           </div>
@@ -196,7 +198,7 @@ const updateCities=(countryName)=>{
   <div className="formContainer">
   <div className="box">
   <label htmlFor="JobTitle">Job Deadline**</label> <br />
-  <input type="date" placeholder='Job Deadline**' required/>
+  <input type="date" placeholder='Job Deadline**' style={{width:"100%"}} required/>
   </div>
 
   </div>

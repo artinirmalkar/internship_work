@@ -9,8 +9,14 @@ const Cart = () => {
       <MainNavbar />
 
       <div>
+        <h3 style={{ textAlign: "center" }}>View Selected Questions</h3>
         {cartData.map(item =>
-          <Card style={{ width: "90%", height: "50%" }}>
+          <Card
+            style={{
+              width: "90%",
+              height: "50%"
+            }}
+          >
             <Card.Header key={item.key}>
               {item.job_title}
             </Card.Header>
