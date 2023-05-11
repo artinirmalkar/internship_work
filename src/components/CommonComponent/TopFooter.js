@@ -3,16 +3,15 @@ import React from "react";
 const TopFooter = () => {
   return (
     <>
-      <div className="topFooter" style={{padding:"30px 0px"}}>
+      <div className="topFooter" style={{padding:"30px 0px", justifyContent:"left"}}>
         <h3>
           {" "}
           Trusted by leading <br />
           companies of the world!
         </h3>
-        <img
+        {/* <img
           src="https://www.zaajira.com/img/jobs-post.9cdf0291.jpg"
-          alt="companies"
-        />
+        /> */}
       </div>
       <div className="bannerfooter">
         <p>DOWNLOAD NOW</p>
