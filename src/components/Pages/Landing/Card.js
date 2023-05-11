@@ -9,9 +9,9 @@ const Card = (props) => {
       className="Topcard"
       style={{
         display: "flex",
-        // paddingRight: "15px",
+        paddingBlock: "8px",
         backgroundColor: "rgb(98, 68, 229)",
-        width: "17rem",
+        width: "13rem",
         height: "5rem",
         borderRadius: "10px",
         textAlign:"left",
@@ -37,7 +37,7 @@ const Card = (props) => {
       className="content"
       style={{
       
-        width: "17rem",
+        width: "13rem",
         padding: "30px 20px",
 
         textAlign: "left",

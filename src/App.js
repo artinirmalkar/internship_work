@@ -22,7 +22,6 @@ import CandidateDetails from "./components/Pages/After Login/Jobs/CreateJob/Cand
 import InterviewQues from "./components/Pages/After Login/Jobs/CreateJob/InterviewQues";
 import Cart from "./Redux/components/Cart";
 function App() {
-  // localStorage.setItem("User", false);
   return (
     <BrowserRouter>
       <Routes>

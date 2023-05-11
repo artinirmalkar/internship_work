@@ -62,9 +62,7 @@ function MainCarousel() {
           containerProps={{
             style: {
               width: "100%",
-
               justifyContent: "space-around",
-
               userSelect: "none"
             }
           }}

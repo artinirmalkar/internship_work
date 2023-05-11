@@ -7,20 +7,17 @@ import MainFooter from "../../CommonComponent/MainFooter";
 import ChangePassword from "./Settings/ChangePassword";
 import NewUser from "./Profile/NewUser";
 import ViewUser from "./Profile/ViewUser";
+import CreateJob from "./Jobs/CreateJob/CreateJob";
 
 export default function AfterLogin() {
   return (
     <div>
-      <MainNavbar />
+      {/* <MainNavbar /> */}
 
-      <Searchbar />
-      {/* <ChangePassword /> */}
-      {/* <NewUser /> */}
-      {/* <ViewUser /> */}
-      {/* <FilterComp /> */}
-      {/* <ProfileCard /> */}
+      {/* <Searchbar /> */}
+      <CreateJob />
 
-      <MainFooter />
+      {/* <MainFooter /> */}
     </div>
   );
 }

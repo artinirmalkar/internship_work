@@ -12,21 +12,21 @@ const Login = props => {
   const handleSubmit = event => {
     event.preventDefault();
     // simulate API call with a delay of 1 second
-    // setTimeout(() => {
-    //   // check if email and password match a predefined value
-    //   if (email === "zaajira123@gmail.com" && password === "Zaajira@123") {
-    //     setIsLoggedIn(true);
-    //   } else {
-    //     alert("Invalid email or password");
-    //   }
-    // }, 1000);
+    setTimeout(() => {
+      // check if email and password match a predefined value
+      if (email === "zaajira123@gmail.com" && password === "Zaajira@123") {
+        setIsLoggedIn(true);
+      } else {
+        alert("Invalid email or password");
+      }
+    }, 1000);
   };
 
   function handlePasswordToggle() {
     setPasswordVisible(!passwordVisible);
   }
 
-  if (!isLoggedIn) {
+  if (isLoggedIn) {
     // if user is logged in, redirect to the home page
     window.location.replace("/AfterLogin");
     return null; // return null to prevent rendering anything else
@@ -81,14 +81,16 @@ const Login = props => {
           </form>
         </div>
       </div>
-      <input type="checkbox" />Remember Me
+      {/* <input type="checkbox" />Remember Me */}
       <ReCAPTCHA
         className="inputCheckbox"
         sitekey="6LfsDoQlAAAAAO8TBcrbc5dDl7hDxg95RiMcQpDL"
       />
-      <button className="buton" type="submit">
-        LOGIN
-      </button>
+      <Link to="/AfterLogin">
+        <button className="buton" type="submit">
+          LOGIN
+        </button>
+      </Link>
       <div className="textalign">
         <span>
           {props.confirmation}

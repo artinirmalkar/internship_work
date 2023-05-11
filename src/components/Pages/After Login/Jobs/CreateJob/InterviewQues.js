@@ -173,7 +173,7 @@ import {
 } from "../../../../../Redux/action";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../InterVirtual.css";
 import { productList } from "../../../../../Redux/JobAction";
 import MainNavbar from "../../../../CommonComponent/MainNavbar";
@@ -182,20 +182,39 @@ import InterResponse from "../InterResponse";
 import InterVirtual from "../InterVirtual";
 import MainFooter from "../../../../CommonComponent/MainFooter";
 function InterviewQues() {
+  // const [formval, setformval] = useState([{ responsibility: " " }]);
   const dispatch = useDispatch();
   let data = useSelector(state => state.productData);
 
   useEffect(() => {
     dispatch(productList());
   }, []);
+
+  const onSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
     <div>
       <MainNavbar />
       <BannerCard />
-      <InterResponse />
+      <InterResponse />{" "}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginInline: "2rem"
+        }}
+      >
+        <h3>Virtual Interview</h3>
+        <h3>Suggested Virtual Interview Questions</h3>
+      </div>
       <div style={{ display: "flex" }}>
         <div style={{ width: "60%" }}>
-          {" "}<InterVirtual />
+          <form onSubmit={onSubmit}>
+            {/* {que.map((item, index) => <InterVirtual key={index} item={item} />)} */}
+            <InterVirtual />
+          </form>
         </div>
         {/* <div>
         <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
@@ -240,7 +259,6 @@ function InterviewQues() {
           )}
         </div>
       </div>
-
       <MainFooter />
     </div>
   );

@@ -11,7 +11,7 @@ const MainNavbar = (props) => {
     <>
       <Navbar className="navbar" expand="lg" style={props.myStyle}>
         <Navbar.Brand className="navleft">
-          <NavLink to="/AfterLogin">
+          <NavLink to="/">
             <img src={Zaajiralogo} alt="" />
           </NavLink>
         </Navbar.Brand>

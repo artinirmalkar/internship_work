@@ -89,29 +89,50 @@
 // }
 
 import React from "react";
+import { removeToCart } from "../../../../Redux/action";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { productList } from "../../../../Redux/JobAction";
 import Card from "react-bootstrap/Card";
+import "./InterVirtual.css";
 const InterVirtual = () => {
   const cartData = useSelector(state => state.cartData);
+  const dispatch = useDispatch();
+  let data = useSelector(state => state.productData);
+
+  useEffect(() => {
+    dispatch(productList());
+  }, []);
   return (
     <div>
       <div>
         {cartData.map(item =>
-          <Card>
-            <Card.Header key={item.key}>
-              {item.job_title}
-            </Card.Header>
-            <Card.Body>
-              <Card.Title>
-                {item.question}
-              </Card.Title>
-              {item.options.map(option =>
-                <Card.Text key={option.question_option_id}>
-                  {option.question_option_title}
-                </Card.Text>
-              )}
-            </Card.Body>
-          </Card>
+          <div className="mainbox">
+            <div className="firstfield comman">
+              <div>
+                <input
+                  type="text"
+                  value={item.question}
+                  placeholder="Have you created smart contracts before?"
+                />
+              </div>
+              <button
+                onClick={() => dispatch(removeToCart(item.id))}
+                style={{ backgroundColor: "white" }}
+              >
+                <i
+                  class="fa-solid fa-trash-can"
+                  style={{ color: "red", fontSize: "25px" }}
+                />
+              </button>
+            </div>
+            {item.options.map(option =>
+              <Card.Text key={option.question_option_id}>
+                {option.question_option_title}
+              </Card.Text>
+            )}
+          </div>
         )}
       </div>
     </div>
