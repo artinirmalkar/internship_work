@@ -49,6 +49,7 @@ input {
     background-color: white;
     width: 40vw;
     margin-inline: none;
+    margin-block: 2rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 100vh;
